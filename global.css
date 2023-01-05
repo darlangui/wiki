@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+
+    font-family: 'Satoshi-Variable', sans-serif;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    background-color: #F7FBFE;
+    --primary-regular: #988ACA;
+
+    --primary-black: #000218;
+    --primary-gray: rgba(0, 2, 24, 0.48);
+    --primary-white: #F7FBFE;
+}
+
+.button_white {
+    width: 123px;
+    height: 40px;
+
+    cursor: pointer;
+
+    border-style: none;
+    background-color: var(--primary-white);
+
+    font-family: 'Satoshi-Black', sans-serif;
+}
+
+.button_black {
+    width: 123px;
+    height: 40px;
+
+    cursor: pointer;
+
+    background-color: var(--primary-black);
+    border-style: none;
+    border-radius: 100px;
+
+    font-family: 'Satoshi-Black', sans-serif;
+    color: var(--primary-white);
+}

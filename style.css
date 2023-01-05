@@ -1,0 +1,32 @@
+header {
+    width: 1440px;
+    height: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 1328px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content ul{
+    display: flex;
+}
+
+.content ul li{
+    font-family: 'Satoshi-Black', sans-serif;
+    color: var(--primary-gray);
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+    margin: 1.5rem;
+}
+
