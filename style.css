@@ -1,27 +1,27 @@
 header {
     height: 120px;
-
+    border-style: solid;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content {
+header .content {
     width: 1328px;
     height: 40px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    border-style: solid;
     padding: 3rem;
 }
 
-.content ul{
+header .content ul{
     display: flex;
 }
 
-.content ul li{
+header .content ul li{
     font-family: 'Satoshi-Black', sans-serif;
     color: var(--primary-gray);
     font-size: 1.3rem;
@@ -31,3 +31,29 @@ header {
     margin: 1.5rem;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .initial_content{
+    width: 1280px;
+    height: 224px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-style: solid;
+}
+
+main .initial_content h1{
+    margin: 1rem;
+}
+
+main .img_content img {
+    width: 1080px;
+    height: 600px;
+
+
+}
