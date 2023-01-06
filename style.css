@@ -150,3 +150,21 @@ main .cards_content .cards .card {
     border-radius: 20px;
     background: var(--segundary-gray);
 }
+
+main .big_cards_content {
+    width: 100%;
+    height: 1620px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .big_cards_content .big_card {
+    width: 1080px;
+    height: 380px;
+
+    border-style: solid;
+
+}

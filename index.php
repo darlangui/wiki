@@ -60,6 +60,17 @@
                 </div>
             </div>
         </section>
+        <section class="big_cards_content">
+            <div class="big_card">
+
+            </div>
+            <div class="big_card">
+
+            </div>
+            <div class="big_card">
+
+            </div>
+        </section>
     </main>
     <footer>
 
