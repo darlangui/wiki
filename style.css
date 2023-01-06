@@ -67,9 +67,7 @@ main .initial_content h1{
     margin: 1rem;
 }
 
-main .img_content img {
-    width: 1080px;
-    height: 600px;
-
+main .animation_content {
+    background: var(--segundary-regular-gradient);
 
 }

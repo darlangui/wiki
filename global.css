@@ -18,7 +18,9 @@ html {
     --primary-regular: #988ACA;
 
     --segundary-gray: #E7EBF2;
+    --segundary-regular-gradient: linear-gradient(293.39deg, #988ACA 46.33%, #000000 48.12%);
     --primary-black: #000218;
+
     --primary-gray: rgba(0, 2, 24, 0.48);
     --primary-white: #F7FBFE;
 }

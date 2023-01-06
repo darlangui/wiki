@@ -36,9 +36,7 @@
             <h1>Publique.</h1>
             <h1>Leia.</h1>
         </section>
-        <section class="img_content">
-            <img src="assets/woman.svg" alt="Imagem de uma mulher com livro">
-        </section>
+        <section class="animation_content"></section>
     </main>
     <footer>
 
