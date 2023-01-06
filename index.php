@@ -38,8 +38,27 @@
         </section>
         <section class="animation_content"></section>
         <section class="block_content">
-            <h2>Uma enciclopédia online e gratuita, criada e editada</h2>
-            <h2>por voluntários de todo o mundo.</h2>
+            <div class="writer_content">
+                <h2>Uma enciclopédia online e gratuita, criada e editada</h2>
+                <h2>por voluntários de todo o mundo.</h2>
+            </div>
+            <div class="buttons_content">
+                <a href="#"><button class="button_black">Últimos Posts</button></a>
+                <a href="#"><button class="button_white">Views</button></a>
+            </div>
+        </section>
+        <section class="cards_content">
+            <div class="cards">
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+            </div>
         </section>
     </main>
     <footer>
