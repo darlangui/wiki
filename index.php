@@ -37,6 +37,10 @@
             <h1>Leia.</h1>
         </section>
         <section class="animation_content"></section>
+        <section class="block_content">
+            <h2>Uma enciclopédia online e gratuita, criada e editada</h2>
+            <h2>por voluntários de todo o mundo.</h2>
+        </section>
     </main>
     <footer>
 
