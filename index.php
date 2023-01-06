@@ -62,14 +62,34 @@
         </section>
         <section class="big_cards_content">
             <div class="big_card">
-
+                <img src="assets/posts_one.svg" alt="" class="img_content">
+                <div>
+                    <h1>Fatos Históricos</h1>
+                    <h2>Diversos contos e fatos definidos por voluntarios do mundo inteiro, somente aqui na sua enciclopédia online e gratuita.</h2>
+                </div>
+            </div>
+            <div class="big_card_two">
+                <div>
+                    <h1>Sögulegar Staðreyndir</h1>
+                    <h3>Nýjar Færslur</h3>
+                    <h2>Nokkrar sögur og staðreyndir skilgreindar af sjálfboðaliðum frá öllum heimshornum, aðeins hér í ókeypis alfræðiorðabókinni þinni á netinu.</h2>
+                </div>
+                <img src="assets/posts_two.svg" alt="" class="img_content">
             </div>
             <div class="big_card">
-
+                <img src="assets/posts_tree.svg" alt="" class="img_content">
+                <div>
+                    <h1>Fatos Históricos</h1>
+                    <h2>Diversos contos e fatos definidos por voluntarios do mundo inteiro, somente aqui na sua enciclopédia online e gratuita.</h2>
+                </div>
             </div>
-            <div class="big_card">
-
-            </div>
+        </section>
+        <section class="authors_content">
+            <h2>Interrese em ser autor de</h2>
+            <h2>diversas publicações?</h2>
+            <h3>Somente aqui você estuda e aprende com diversas</h3>
+            <h3>pessoas de todo o mundo.</h3>
+            <a href="#"><button class="button_white">Registre-se</button></a>
         </section>
     </main>
     <footer>
