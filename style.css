@@ -251,3 +251,49 @@ main .authors_content .button_white{
     margin-top: 50px;
     font-family: 'Satoshi-Regular', sans-serif;
 }
+
+footer{
+    height: 400px;
+    width: 100%;
+
+
+    background-color: var(--primary-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+footer .option_content {
+    width: 1080px;
+    height: 190px;
+    color: var(--primary-white);
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .option_content span{
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+footer .option_content ul li {
+    font-size: 3rem;
+    margin: 7px;
+    font-family: 'Satoshi-Bold', sans-serif;
+}
+
+
+footer .last_linear_content .linear{
+    width: 1080px;
+    height: 1px;
+    margin-top: 6rem;
+    background-color: var(--primary-white);
+}
+
+footer .last_linear_content .last {
+    margin-top: 1rem;
+    color: var(--primary-white);
+    display: flex;
+    justify-content: space-between;
+}
