@@ -18,7 +18,7 @@
             </section>
             <section class="center">
                     <ul>
-                        <li>BOAS VINDAS</li>
+                        <li class="li_selected">BOAS VINDAS</li>
                         <li>POSTS</li>
                         <li>AUTORES</li>
                         <li>AJUDA</li>
