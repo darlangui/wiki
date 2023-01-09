@@ -50,7 +50,13 @@
         <section class="cards_content">
             <div class="cards">
                 <div class="card">
-
+                    <div class="header">
+                        <img src="" alt="">
+                        <span></span>
+                    </div>
+                    <div class="main">
+                        <span>O termo "butterfly" foi originado a partir da palavra inglesa antiga "butter-fleoge", que significa "borboleta de manteiga". Isso se deve ao fato de que as pessoas acreditavam que as borboletas eram criadas a partir de manteiga quando elas saíam de seus casulos.</span>
+                    </div>
                 </div>
                 <div class="card">
 
@@ -97,21 +103,14 @@
             <a href="index.php"><img src="assets/logo_wiki_white.svg" alt="Logo da WIKING"></a>
             <ul>
                 <li><span>info</span></li>
-                <li>Posts</li>
-                <li>Autores</li>
-                <li>Ajuda</li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Ajuda</a></li>
             </ul>
             <ul>
-                <li><span>info</span></li>
-                <li>Posts</li>
-                <li>Autores</li>
-                <li>Ajuda</li>
-            </ul>
-            <ul>
-                <li><span>info</span></li>
-                <li>Posts</li>
-                <li>Autores</li>
-                <li>Ajuda</li>
+                <li><span>social</span></li>
+                <li>Twitter</li>
+                <li>Instagram</li>
             </ul>
         </section>
         <section class="last_linear_content">

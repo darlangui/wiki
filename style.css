@@ -151,6 +151,10 @@ main .cards_content .cards .card {
     background: var(--segundary-gray);
 }
 
+main .cards_content .cards .card .main span{
+    font-size: 1.4rem;
+}
+
 main .big_cards_content {
     width: 100%;
     height: 1620px;
@@ -283,6 +287,11 @@ footer .option_content ul li {
     font-family: 'Satoshi-Bold', sans-serif;
 }
 
+footer .option_content a{
+    font-size: 3rem;
+    font-family: 'Satoshi-Bold', sans-serif;
+    color: var(--primary-white);
+}
 
 footer .last_linear_content .linear{
     width: 1080px;
@@ -297,3 +306,4 @@ footer .last_linear_content .last {
     display: flex;
     justify-content: space-between;
 }
+
