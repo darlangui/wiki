@@ -32,7 +32,7 @@ header .content ul li{
     align-items: center;
 }
 
-header .content ul .li_selected{
+header .content ul .li_selected:hover{
     border-style: solid;
     border-width: 2px;
     border-radius: 20px;
@@ -44,8 +44,11 @@ header .content .left {
     width: 246px;
 }
 
-
-
+header .button_white:hover{
+    border-style: solid;
+    border-color: var(--segundary-gray);
+    border-radius: 20px;
+}
 
 main {
     display: flex;
@@ -115,6 +118,7 @@ main .block_content .buttons_content .button_white {
     border-radius: 25px;
     font-size: 1.7rem;
 }
+
 
 main .cards_content {
     width: 100%;
@@ -259,9 +263,6 @@ main .authors_content .button_white{
     font-family: 'Satoshi-Regular', sans-serif;
 }
 
-
-
-
 footer{
     height: 400px;
     width: 100%;
@@ -310,4 +311,3 @@ footer .last_linear_content .last {
     display: flex;
     justify-content: space-between;
 }
-

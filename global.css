@@ -90,3 +90,20 @@ div.input-container input {
     transition: border 0.5s;
 }
 
+a:link {
+    font-family: 'Satoshi-Black', sans-serif;
+    color: var(--primary-gray);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+a:visited {
+    font-family: 'Satoshi-Black', sans-serif;
+    color: var(--primary-gray);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+a:hover{
+    color: var(--primary-black);
+}
