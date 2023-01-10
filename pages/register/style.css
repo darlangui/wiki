@@ -1,0 +1,154 @@
+main {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+main section {
+    width: 50%;
+    height: 100%;
+}
+
+main .content_main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .content_main .logo {
+    position: absolute;
+    top: 48px;
+}
+
+main .content_main .form {
+    width: 70%;
+    max-width: 624px;
+}
+
+main .content_main .form .button {
+    display: flex;
+    justify-content: center;
+}
+
+main .content_main .form form h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: 'Satoshi-Black', sans-serif;
+}
+
+main .content_main .form form h2 img{
+    margin-left: 15px;
+}
+
+main .content_main .form form .input-container + .input-container {
+    margin-top: 5px;
+}
+
+main .content_main .form form button {
+    margin-top: 40px;
+    width: 70%;
+    height: 56px;
+    border-radius: 15px;
+    border: 0;
+
+    font-weight: 700;
+    font-size: 2rem;
+
+    transition: background 0.5s;
+    cursor: pointer;
+}
+
+main .content_main .form form .redirect {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+main .content_main .form form .redirect span {
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+main .content_main .form form .redirect span a {
+    font-weight: 600;
+    color: var(--primary-black);
+}
+
+
+main .ilust_content {
+    height: 100vh;
+    border-radius: 48px 0 0 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main .ilust_content .square {
+    width: 180px;
+    height: 180px;
+    background-color: var(--primary-regular);
+    border-radius: 10%;
+    animation: animateSquare 7s infinite ease-in-out;
+    rotate: 45deg;
+}
+
+main .ilust_content .blur {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 10%;
+    background: var(--segundary-black);
+    -webkit-backdrop-filter: blur(20px);
+    rotate: 45deg;
+    animation: animateBlur 7s infinite ease-in-out;
+}
+
+main .ilust_content .blur_two {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 10%;
+    rotate: 45deg;
+    background: var(--primary-gray);
+    -webkit-backdrop-filter: blur(20px);
+    animation: animateBlurTwo 7s infinite ease-in-out;
+}
+
+@keyframes animateSquare {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    } 50% {
+          transform: translate3d(0px, 180px, 40px);
+      } 100% {
+            transform: translate3d(0px, 0px, 0px);
+        }
+}
+
+@keyframes animateBlur {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    } 50% {
+          transform: translate3d(40px, 40px, 40px);
+      } 100% {
+            transform: translate3d(0px, 0px, 0px);
+        }
+}
+
+@keyframes animateBlurTwo {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    } 50% {
+          transform: translate3d(180px, 0px, 40px);
+      } 100% {
+            transform: translate3d(0px, 0px, 0px);
+        }
+}
+

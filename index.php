@@ -24,8 +24,8 @@
                     </ul>
             </section>
             <section class="right">
-                <a href="#" ><button class="button_white">ENTRAR</button></a>
-                <a href="#"><button class="button_black">REGISTRAR-SE</button></a>
+                <a href="pages/login" ><button class="button_white">ENTRAR</button></a>
+                <a href="pages/register"><button class="button_black">REGISTRAR-SE</button></a>
             </section>
         </div>
     </header>

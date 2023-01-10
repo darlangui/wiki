@@ -57,3 +57,36 @@ h1 {
     font-family: 'Satoshi-Black', sans-serif;
     color: var(--primary-white);
 }
+
+input {
+    font-family: Satoshi-Regular, sans-serif;
+}
+
+div.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.input-container label {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: var(--primary-gray);
+}
+
+div.input-container input {
+    width: 100%;
+    height: 56px;
+    padding: 17px 24px;
+    border: 2px solid var(--primary-gray);
+    border-radius: 12px;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 135%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    transition: border 0.5s;
+}
+
