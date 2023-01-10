@@ -82,23 +82,23 @@
             <div class="big_card">
                 <img src="assets/posts_one.svg" alt="" class="img_content">
                 <div>
-                    <h1>Fatos Históricos</h1>
-                    <h2>Diversos contos e fatos definidos por voluntarios do mundo inteiro, somente aqui na sua enciclopédia online e gratuita.</h2>
+                    <h1>Qualidade de Informações</h1>
+                    <h2>Informações dos mais diversos continentes do mundo com a maior qualidade e integridade de todos os tempos.</h2>
                 </div>
             </div>
             <div class="big_card_two">
                 <div>
-                    <h1>Sögulegar Staðreyndir</h1>
-                    <h3>Nýjar Færslur</h3>
-                    <h2>Nokkrar sögur og staðreyndir skilgreindar af sjálfboðaliðum frá öllum heimshornum, aðeins hér í ókeypis alfræðiorðabókinni þinni á netinu.</h2>
+                    <h1>Dados em Tempo Real</h1>
+                    <h3>24h por dia</h3>
+                    <h2>Atualizações a cada instante em todo o planeta com as mais diversas informações do mundo.</h2>
                 </div>
                 <img src="assets/posts_two.svg" alt="" class="img_content">
             </div>
             <div class="big_card">
                 <img src="assets/posts_tree.svg" alt="" class="img_content">
                 <div>
-                    <h1>Fatos Históricos</h1>
-                    <h2>Diversos contos e fatos definidos por voluntarios do mundo inteiro, somente aqui na sua enciclopédia online e gratuita.</h2>
+                    <h1>Publicação de Todo o Mundo</h1>
+                    <h2>Dados trazidos de todos os lugares em todo momento importante da história do mundo.</h2>
                 </div>
             </div>
         </section>
