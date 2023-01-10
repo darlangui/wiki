@@ -138,7 +138,6 @@ main .cards_content {
 main .cards_content .cards {
     width: 1128px;
     height: 246px;
-
     display: flex;
     justify-content: space-between;
 }
@@ -147,12 +146,36 @@ main .cards_content .cards .card {
     width: 340px;
     height: 246px;
 
-    border-radius: 20px;
+    border-radius: 25px;
     background: var(--segundary-gray);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-main .cards_content .cards .card .main span{
+main .cards_content .cards .card .header{
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    font-family: 'Satoshi-Black', sans-serif;
+    height: 40px;
+    width: 280px;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+main .cards_content .cards .card .header span{
+    margin-left: 25px;
+}
+
+main .cards_content .cards .card .main{
     font-size: 1.4rem;
+    height: 140px;
+    width: 280px;
+    margin-top: 5px;
 }
 
 main .big_cards_content {
@@ -192,6 +215,7 @@ main .big_cards_content .big_card h3{
     font-size: 3rem;
     color: var(--primary-gray);
 }
+
 main .big_cards_content .big_card_two {
     width: 1080px;
     height: 380px;

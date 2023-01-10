@@ -51,18 +51,30 @@
             <div class="cards">
                 <div class="card">
                     <div class="header">
-                        <img src="" alt="">
-                        <span></span>
+                        <img src="assets/image_woman.svg" alt="Imagem do usuario">
+                        <span>Sofia Sterm</span>
                     </div>
                     <div class="main">
                         <span>O termo "butterfly" foi originado a partir da palavra inglesa antiga "butter-fleoge", que significa "borboleta de manteiga". Isso se deve ao fato de que as pessoas acreditavam que as borboletas eram criadas a partir de manteiga quando elas saíam de seus casulos.</span>
                     </div>
                 </div>
                 <div class="card">
-
+                    <div class="header">
+                        <img src="assets/image_man.svg" alt="Imagem do usuario">
+                        <span>Nathan David Thompson.</span>
+                    </div>
+                    <div class="main">
+                        <span>Os elefantes são os únicos animais com quatro joelhos visíveis. As outras três pernas estão escondidas dentro de suas pernas dianteiras e são usadas para se apoiar quando estão deitados.</span>
+                    </div>
                 </div>
                 <div class="card">
-
+                    <div class="header">
+                        <img src="assets/image_man2.svg" alt="">
+                        <span>Liam Jameson Williams</span>
+                    </div>
+                    <div class="main">
+                        <span>O formigueiro mais alto já registrado mediu 30 metros de altura e foi encontrado na África. Ele foi construído por uma colônia de formigas saúva e levou cerca de 30 anos para ser completado.</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -109,8 +121,8 @@
             </ul>
             <ul>
                 <li><span>social</span></li>
-                <li>Twitter</li>
-                <li>Instagram</li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
             </ul>
         </section>
         <section class="last_linear_content">
