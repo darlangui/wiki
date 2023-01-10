@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="fonts/Fonts/WEB/css/satoshi.css">
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" href="assets/logo_wk.svg">
 </head>
 <body>

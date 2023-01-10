@@ -8,11 +8,9 @@ header {
 header .content {
     width: 1328px;
     height: 40px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 3rem;
 }
 
@@ -25,11 +23,8 @@ header .content ul li{
     font-family: 'Satoshi-Black', sans-serif;
     color: var(--primary-gray);
     font-size: 1.3rem;
-
     cursor: pointer;
-
     margin: 1.5rem;
-
     width: 120px;
     height: 40px;
     display: flex;
@@ -48,6 +43,9 @@ header .content ul .li_selected{
 header .content .left {
     width: 246px;
 }
+
+
+
 
 main {
     display: flex;
@@ -77,7 +75,6 @@ main .block_content {
     width: 640px;
     height: 160px;
     margin-top: 96px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,26 +104,21 @@ main .block_content .buttons_content {
 main .block_content .buttons_content .button_black {
     width: 150px;
     height: 52px;
-
     border-radius: 25px;
-
     font-size: 1.7rem;
 }
 
 main .block_content .buttons_content .button_white {
     width: 170px;
     height: 52px;
-
     border-style: solid;
     border-radius: 25px;
-
     font-size: 1.7rem;
 }
 
 main .cards_content {
     width: 100%;
     height: 384px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,10 +134,8 @@ main .cards_content .cards {
 main .cards_content .cards .card {
     width: 340px;
     height: 246px;
-
     border-radius: 25px;
     background: var(--segundary-gray);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,7 +148,6 @@ main .cards_content .cards .card .header{
     font-family: 'Satoshi-Black', sans-serif;
     height: 40px;
     width: 280px;
-
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -178,7 +167,6 @@ main .cards_content .cards .card .main{
 main .big_cards_content {
     width: 100%;
     height: 1620px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,7 +176,6 @@ main .big_cards_content {
 main .big_cards_content .big_card {
     width: 1080px;
     height: 380px;
-
     display: flex;
     align-items: center
 ;
@@ -216,7 +203,6 @@ main .big_cards_content .big_card h3{
 main .big_cards_content .big_card_two {
     width: 1080px;
     height: 380px;
-
     display: flex;
     align-items: center
 ;
@@ -241,12 +227,8 @@ main .big_cards_content .big_card_two h3{
 main .authors_content {
     width: 100%;
     height: 690px;
-
-
     background-image: url("assets/back_authors.svg");
     background-repeat: no-repeat;
-
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -263,7 +245,6 @@ main .authors_content h3{
     font-size: 3.5rem;
 }
 
-
 main .authors_content .button_white{
     width: 150px;
     height: 60px;
@@ -278,11 +259,12 @@ main .authors_content .button_white{
     font-family: 'Satoshi-Regular', sans-serif;
 }
 
+
+
+
 footer{
     height: 400px;
     width: 100%;
-
-
     background-color: var(--segundary-black);
     display: flex;
     flex-direction: column;
