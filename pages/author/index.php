@@ -40,7 +40,7 @@
             <h2>Somente aqui pode compartilhar</h2>
             <h2>informações e dados de qualidade.</h2>
             <form action="#" method="post">
-                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+                <label for="email"></label><input type="email" name="email" id="email" placeholder="Digite seu email" required>
                 <button type="submit">Começar</button>
             </form>
         </section>
