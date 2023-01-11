@@ -1,0 +1,130 @@
+main .content_author {
+    height: 500px;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .content_author h1{
+    font-size: 5rem;
+    color: var(--primary-regular);
+}
+
+main .content_author h2{
+    font-size: 2.5rem;
+    color: var(--primary-gray);
+}
+
+main .content_author h3{
+    font-size: 1.6rem;
+    color: var(--primary-gray);
+}
+
+main .content_author form{
+    width: 600px;
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 50px;
+}
+
+main .content_author form input{
+    border-style: none;
+    background-color: rgba(152, 138, 202, 0.3);
+    width: 70%;
+    height: 100%;
+    color: var(--primary-gray);
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+main .content_author form button{
+    width: 20%;
+    height: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-white);
+    background-color: var(--primary-regular);
+    border-radius: 15px;
+}
+
+main .all_authors {
+    margin-top: 120px;
+    width: 1080px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .all_authors h2{
+    font-size: 3.2rem;
+    color: var(--primary-regular);
+    font-family: 'Satoshi-Black', sans-serif;
+}
+
+main .all_authors h3{
+    font-size: 2.2rem;
+    color: var(--primary-gray);
+}
+
+main .all_authors .card_authors {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .all_authors .card_authors .card{
+    width: 320px;
+    height: 300px;
+    margin: 20px;
+    padding: 10px;
+    border-color: var(--primary-gray);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 1px 1px 3px 1px var(--primary-regular);
+}
+
+main .all_authors .card_authors .card:hover{
+    box-shadow: 1px 1px 6px 1px var(--primary-regular);
+}
+
+main .all_authors .card_authors .card img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+main .all_authors .card_authors .card h4 {
+    font-size: 2.6rem;
+    font-family: 'Satoshi-Black', sans-serif;
+    color: var(--primary-black);
+    margin-top: 15px;
+}
+
+main .all_authors .card_authors .card h5 {
+    font-size: 1.6rem;
+    font-family: Satoshi-Regular, sans-serif;
+    color: var(--primary-gray);
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+main .all_authors .card_authors .card a span{
+    font-size: 2.2rem;
+    font-family: 'Satoshi-Black', sans-serif;
+    color: var(--primary-regular);
+}

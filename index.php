@@ -19,7 +19,7 @@
                 <ul>
                     <li class="li_selected">BOAS VINDAS</li>
                     <a href="pages/posts"><li class="li_selected">POSTS</li></a>
-                    <li class="li_selected">AUTORES</li>
+                    <a href="pages/author"><li class="li_selected">AUTORES</li></a>
                     <li class="li_selected">AJUDA</li>
                 </ul>
             </section>

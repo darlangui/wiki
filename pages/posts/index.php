@@ -16,19 +16,19 @@
     <header>
         <div class="content">
             <section class="left">
-                <a href="index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
+                <a href="../../index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
             </section>
             <section class="center">
                 <ul>
                     <a href="../../"><li class="li_selected">BOAS VINDAS</li></a>
                     <a href="#"><li class="li_selected">POSTS</li></a>
-                    <li class="li_selected">AUTORES</li>
+                    <a href="../author"><li class="li_selected">AUTORES</li></a>
                     <li class="li_selected">AJUDA</li>
                 </ul>
             </section>
             <section class="right">
-                <a href="pages/login" ><button class="button_white">ENTRAR</button></a>
-                <a href="pages/register"><button class="button_black">REGISTRAR-SE</button></a>
+                <a href="../login" ><button class="button_white">ENTRAR</button></a>
+                <a href="../register"><button class="button_black">REGISTRAR-SE</button></a>
             </section>
         </div>
     </header>
@@ -64,7 +64,40 @@
         </section>
         <section class="main_content">
             <h3>Todas as Publicações</h3>
-
+            <section class="content_card">
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="resource">
+                        <h4>Resource</h4>
+                        <h3>Improving Your Site's SED</h3>
+                        <span>Build a unique experience  by missing and matching components.</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="resource">
+                        <h4>Resource</h4>
+                        <h3>Improving Your Site's SED</h3>
+                        <span>Build a unique experience  by missing and matching components.</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="resource">
+                        <h4>Resource</h4>
+                        <h3>Improving Your Site's SED</h3>
+                        <span>Build a unique experience  by missing and matching components.</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="resource">
+                        <h4>Resource</h4>
+                        <h3>Improving Your Site's SED</h3>
+                        <span>Build a unique experience  by missing and matching components.</span>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
     <footer>
