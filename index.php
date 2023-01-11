@@ -10,7 +10,25 @@
     <link rel="icon" href="assets/logo_wk.svg">
 </head>
 <body>
-    <?php include_once 'header.php';?>
+    <header>
+        <div class="content">
+            <section class="left">
+                <a href="index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
+            </section>
+            <section class="center">
+                <ul>
+                    <li class="li_selected">BOAS VINDAS</li>
+                    <a href="pages/posts"><li class="li_selected">POSTS</li></a>
+                    <li class="li_selected">AUTORES</li>
+                    <li class="li_selected">AJUDA</li>
+                </ul>
+            </section>
+            <section class="right">
+                <a href="pages/login" ><button class="button_white">ENTRAR</button></a>
+                <a href="pages/register"><button class="button_black">REGISTRAR-SE</button></a>
+            </section>
+        </div>
+    </header>
     <main>
         <section class="initial_content">
             <h1>Escreva.</h1>
@@ -91,8 +109,29 @@
             <a href="#"><button class="button_white">Registre-se</button></a>
         </section>
     </main>
-    <?php
-        include_once 'footer.php';
-    ?>
+    <footer>
+        <section class="option_content">
+            <a href="index.php"><img src="assets/logo_wiki_white.svg" alt="Logo da WIKING"></a>
+            <ul>
+                <li><span>info</span></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+            <ul>
+                <li><span>social</span></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </section>
+        <section class="last_linear_content">
+            <div class="linear"></div>
+            <div class="last">
+                <h3>2023</h3>
+                <h3>Tamplete by Darlan</h3>
+                <h3>2023</h3>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

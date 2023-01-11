@@ -12,10 +12,6 @@
     <link rel="icon" href="../../assets/logo_wk.svg">
 </head>
 <body>
-    <?php include_once '../../header.php';?>
-    <main>
 
-    </main>
-    <?php include_once '../../footer.php';?>
 </body>
 </html>
