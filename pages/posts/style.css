@@ -1,7 +1,6 @@
 main .writer_content {
     width: 100vw;
     height: 300px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +19,6 @@ main .writer_content h2 {
 main .cards_content {
     width: 100vw;
     height: 444px;
-
     display: flex;
     justify-content: center;
 }
@@ -52,7 +50,6 @@ main .cards_content .left .card {
 main .cards_content .right {
     height: 350px;
     width: 334px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -68,10 +65,8 @@ main .cards_content .right .card {
     width: 334px;
     height: 60px;
     border-radius: 15px;
-
     display: flex;
     align-items: center;
-
     background-color: var(--primary-regular);
 }
 
@@ -84,7 +79,6 @@ main .cards_content .right .card h3 {
 main .cards_content .right img{
     width: 30%;
     height: 100%;
-
     border-radius: 15px;
 }
 
