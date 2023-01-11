@@ -2,7 +2,6 @@ main {
     width: 100%;
     max-width: 100vw;
     height: 100vh;
-
     display: flex;
     align-items: center;
 }
@@ -46,15 +45,12 @@ main .content_main .form form .input-container + .input-container {
 
 main .content_main .form form button {
     margin-top: 40px;
-
     width: 70%;
     height: 56px;
     border-radius: 15px;
     border: 0;
-
     font-weight: 700;
     font-size: 2rem;
-
     transition: background 0.5s;
     cursor: pointer;
 }
