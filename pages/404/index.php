@@ -12,6 +12,12 @@
     <link rel="icon" href="../../assets/logo_wk.svg">
 </head>
 <body>
-    
+    <main>
+        <h1>404</h1>
+        <h2>Página não encontrada.</h2>
+        <h3>A página que procura não existe ou não tem acesso.</h3>
+        <h3>Por favor, volte para a página inicial.</h3>
+        <a href="../../"><button class="button_black">VOLTAR</button></a>
+    </main>
 </body>
 </html>
