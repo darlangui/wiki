@@ -50,6 +50,34 @@ header .button_white:hover{
     border-radius: 20px;
 }
 
+header .isLogged .content .right {
+    display: none;
+}
+
+header .content .profile{
+    display: none;
+}
+
+header .isLogged .content .profile{
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(152, 138, 202, 0.6);
+    border-radius: 100%;
+    border-style: solid;
+    border-color: var(--primary-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .isLogged .content .profile span{
+    font-size: 1.6rem;
+    font-family: 'Satoshi-Black', sans-serif;
+    color: var(--primary-black);
+
+}
+
 main {
     display: flex;
     flex-direction: column;
