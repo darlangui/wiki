@@ -40,7 +40,7 @@ header .content ul .li_selected:hover{
     color: var(--primary-black);
 }
 
-header .content .left {
+header .isUser .content .left {
     width: 246px;
 }
 
@@ -54,27 +54,49 @@ header .isLogged .content .right {
     display: none;
 }
 
-header .content .profile{
+header .isLogged .content .profile {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--primary-regular);
+    border-radius: 100%;
+    background-color: rgba(152, 138, 202, 0.7);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .isUser .content .profile {
     display: none;
 }
 
-header .isLogged .content .profile{
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-    background-color: rgba(152, 138, 202, 0.6);
-    border-radius: 100%;
-    border-style: solid;
-    border-color: var(--primary-black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header .isLogged .content .profile span{
+    font-family: 'Satoshi-Black', sans-serif;
+    font-size: 1.6rem;
 }
 
-header .isLogged .content .profile span{
-    font-size: 1.6rem;
-    font-family: 'Satoshi-Black', sans-serif;
+header .isLogged .content .profile button{
+    border: none;
+    background-color: var(--primary-white);
+    font-family: Satoshi-Regular, sans-serif;
+    font-weight: 600;
     color: var(--primary-black);
+}
+
+header .isLogged .content .profile .down{
+    display: none;
+}
+
+header .isLogged .content .profile:hover .down {
+    position: absolute;
+    display: block;
+    top: 90px;
+}
+
+header .isLogged .content .profile:hover span{
+    display: block;
 }
 
 main {

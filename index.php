@@ -11,8 +11,7 @@
 </head>
 <body>
     <header>
-         <!-- Tags content: isLogged -->
-        <div class="">
+        <div class="isLogged"> <!-- Tags content: isLogged or isAdmin or isUser -->
             <div class="content">
                 <section class="left">
                     <a href="index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
@@ -31,6 +30,10 @@
                 </section>
                 <section class="profile">
                     <span>D</span>
+                    <div class="down">
+                        <a href="#">Postar</a>
+                        <a href="#">Sair</a>
+                    </div>
                 </section>
             </div>
         </div>
