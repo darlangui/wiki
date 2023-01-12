@@ -106,7 +106,7 @@
             <h2>diversas publicações?</h2>
             <h3>Somente aqui você estuda e aprende com diversas</h3>
             <h3>pessoas de todo o mundo.</h3>
-            <a href="#"><button class="button_white">Registre-se</button></a>
+            <a href="pages/register"><button class="button_white">Registre-se</button></a>
         </section>
     </main>
     <footer>
