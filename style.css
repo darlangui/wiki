@@ -54,6 +54,13 @@ header .isLogged .content .right {
     display: none;
 }
 
+header .isLogged .content .right_profile{
+    width: 248.767px;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+}
+
 header .isLogged .content .profile {
     width: 48px;
     height: 48px;
@@ -88,8 +95,7 @@ header .isLogged .content .profile .dropdown a{
     color: var(--primary-black);
     font-family: Satoshi-Regular, sans-serif;
     font-weight: 600;
-    height: 25px;
-    width: 70px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,6 +189,14 @@ main .cards_content {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main .cards_content img{
+    min-height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 100%;
 }
 
 main .cards_content .cards {

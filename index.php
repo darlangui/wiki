@@ -28,13 +28,15 @@
                     <a href="pages/login" ><button class="button_white">ENTRAR</button></a>
                     <a href="pages/register"><button class="button_black">REGISTRAR-SE</button></a>
                 </section>
-                <section class="profile">
-                    <span id="profile">D</span>
-                    <div id="dropdown" class="dropdown">
-                        <a href="#">Meu Perfil</a>
-                        <a href="#">Postar</a>
-                        <a href="#" class="logout">Sair</a>
-                    </div>
+                <section class="right_profile">
+                    <section class="profile">
+                        <span id="profile">D</span>
+                        <div id="dropdown" class="dropdown">
+                            <a href="pages/profile">Meu Perfil</a>
+                            <a href="#">Postar</a>
+                            <a href="#" class="logout">Sair</a>
+                        </div>
+                    </section>
                 </section>
             </div>
         </div>

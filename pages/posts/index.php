@@ -31,12 +31,14 @@
                     <a href="../login" ><button class="button_white">ENTRAR</button></a>
                     <a href="../register"><button class="button_black">REGISTRAR-SE</button></a>
                 </section>
-                <section class="profile">
-                    <span id="profile">D</span>
-                    <div id="dropdown" class="dropdown">
-                        <a href="#">Postar</a>
-                        <a href="#" class="logout">Sair</a>
-                    </div>
+                <section class="right_profile">
+                    <section class="profile">
+                        <span id="profile">D</span>
+                        <div id="dropdown" class="dropdown">
+                            <a href="#">Postar</a>
+                            <a href="#" class="logout">Sair</a>
+                        </div>
+                    </section>
                 </section>
             </div>
         </div>
