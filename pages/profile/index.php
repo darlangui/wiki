@@ -47,11 +47,44 @@
     <main>
         <section class="content_profile">
             <img src="../../assets/image_woman.svg" alt="Imagem do usuário">
-            <span>Olá, Nome do Usuário</span>
+            <span><span class="purplu">Olá,</span> Sofia Ester</span>
         </section>
-        <section>
+        <section class="info_basic">
+            <h1>Informações básicas</h1>
+            <span>Algumas informações básicas sobre a sua conta.</span>
+            <form method="post" class="form_name">
+                <label for="name" class="name">
+                    <span> Nome </span>
+                    <input type="text" id="name" class="input-name" value="Sofia Ester" required>
+                </label>
+                <div class="alter_image">
+                    <label for="image" class="image">
+                        <span> Foto de Perfil </span>
+                        <img src="../../assets/image_woman.svg" alt="Foto de pefil">
+                        <input type="file" id="image">
+                    </label>
+                    <button type="submit">Alterar</button>
+                </div>
+            </form>
+        </section>
+        <section class="info_basic">
+            <h1>Informações de contato</h1>
+            <span>Algumas informações de contato sobre a sua conta.</span>
+            <form method="post" class="form_name">
+                <label for="email" class="name">
+                    <span> E-mail </span>
+                    <input type="text" id="email" class="input-name" value="sofiaester@gmail.com" required>
+                </label>
+                <div class="alter_image">
+                    <label for="desc" class="image">
+                        <span> Descrição </span>
+                        <input type="text" name="desc" id="desc" placeholder="Descrição de sua conta">
+                    </label>
+                    <button type="submit">Alterar</button>
+                </div>
+            </form>
+        </section>
 
-        </section>
     </main>
     <footer>
         <section class="option_content">

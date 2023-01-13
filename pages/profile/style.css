@@ -10,6 +10,7 @@ main .content_profile{
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
+    margin-bottom: 230px;;
 }
 
 main .content_profile img{
@@ -24,4 +25,131 @@ main .content_profile span{
     font-size: 4.5rem;
     font-family: 'Satoshi-Black', sans-serif;
     margin-top: 30px;
+}
+
+main .content_profile .purplu{
+    color: var(--primary-regular);
+}
+
+main .info_basic{
+    width: 840px;
+    height: 250px;
+    border: 1px solid var(--segundary-gray);
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+main .info_basic:hover{
+    box-shadow: 1px 1px 3px 1px var(--primary-regular);
+}
+
+main .info_basic h1{
+    font-size: 2.5rem;
+    color: var(--primary-black);
+}
+
+main .info_basic span{
+    font-size: 1.8rem;
+    color: var(--primary-black);
+}
+
+main .info_basic label{
+    font-size: 1.6rem;
+    color: var(--primary-gray);
+    font-family: 'Satoshi-Black', sans-serif;
+}
+
+main .info_basic .form_name{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+main .info_basic form span{
+    font-size: 1.8rem;
+    color: var(--primary-gray);
+    font-family: Satoshi-Regular, sans-serif;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+main .info_basic form .name{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .info_basic form .image{
+    width: 400px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+main .info_basic form button{
+    width: 100px;
+    height: 50px;
+    background-color: var(--primary-white);
+    border-style: solid;
+    border-radius: 10px;
+    font-family: Satoshi-Bold, sans-serif;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+main .info_basic form button:hover{
+    box-shadow: 1px 1px 3px 1px var(--primary-regular);
+}
+
+main .info_basic form .input-name{
+    background-color: var(--primary-white);
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    width: 700px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 30px;
+    color: var(--primary-black);
+}
+
+main .info_basic form .alter_image{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .info_basic form .name input{
+    border-style: none;
+}
+
+main .info_basic form .alter_image .image input{
+    margin-left: 30px;
+}
+
+input[type="file"]{
+    display: none;
+}
+main .info_basic form img{
+    height: 58px;
+    width: 58px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+main .info_basic form .alter_image .image input{
+    background-color: var(--primary-white);
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 30px;
+    color: var(--primary-black);
+    border-style: none;
 }
