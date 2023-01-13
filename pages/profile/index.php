@@ -84,7 +84,15 @@
                 </div>
             </form>
         </section>
+        <section class="formations">
+            <section class="add_forma">
+                <h2>Formações e Especializações</h2>
+                <a href="#"><button>Adicionar +</button></a>
+            </section>
+            <section class="card">
 
+            </section>
+        </section>
     </main>
     <footer>
         <section class="option_content">

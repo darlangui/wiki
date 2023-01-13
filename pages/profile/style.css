@@ -153,3 +153,32 @@ main .info_basic form .alter_image .image input{
     color: var(--primary-black);
     border-style: none;
 }
+
+main .formations {
+    margin-top: 50px;
+    width: 1080px;
+
+}
+
+main .formations .add_forma{
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-between;
+}
+
+main .formations .add_forma button{
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: var(--primary-regular);
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-family: Satoshi-Bold, sans-serif;
+    color: var(--primary-white);
+}
+
+main .formations .add_forma button:hover{
+    box-shadow: 1px 1px 1px var(--primary-black);
+}
+
