@@ -14,22 +14,31 @@
 </head>
 <body>
     <header>
-        <div class="content">
-            <section class="left">
-                <a href="../../index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
-            </section>
-            <section class="center">
-                <ul>
-                    <a href="../../"><li class="li_selected">BOAS VINDAS</li></a>
-                    <a href="#"><li class="li_selected">POSTS</li></a>
-                    <a href="../author"><li class="li_selected">AUTORES</li></a>
-                    <li class="li_selected">AJUDA</li>
-                </ul>
-            </section>
-            <section class="right">
-                <a href="../login" ><button class="button_white">ENTRAR</button></a>
-                <a href="../register"><button class="button_black">REGISTRAR-SE</button></a>
-            </section>
+        <div class="isLogged"> <!-- Tags content: isLogged or isAdmin or isUser -->
+            <div class="content">
+                <section class="left">
+                    <a href="../../index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
+                </section>
+                <section class="center">
+                    <ul>
+                        <a href="../../"><li class="li_selected">BOAS VINDAS</li></a>
+                        <a href="#"><li class="li_selected">POSTS</li></a>
+                        <a href="../author"><li class="li_selected">AUTORES</li></a>
+                        <li class="li_selected">AJUDA</li>
+                    </ul>
+                </section>
+                <section class="right">
+                    <a href="../login" ><button class="button_white">ENTRAR</button></a>
+                    <a href="../register"><button class="button_black">REGISTRAR-SE</button></a>
+                </section>
+                <section class="profile">
+                    <span id="profile">D</span>
+                    <div id="dropdown" class="dropdown">
+                        <a href="#">Postar</a>
+                        <a href="#" class="logout">Sair</a>
+                    </div>
+                </section>
+            </div>
         </div>
     </header>
     <main>
@@ -124,5 +133,6 @@
             </div>
         </section>
     </footer>
+    <script src="../../utils/DropDownProfile.js"></script>
 </body>
 </html>

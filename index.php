@@ -29,10 +29,11 @@
                     <a href="pages/register"><button class="button_black">REGISTRAR-SE</button></a>
                 </section>
                 <section class="profile">
-                    <span>D</span>
-                    <div class="down">
+                    <span id="profile">D</span>
+                    <div id="dropdown" class="dropdown">
+                        <a href="#">Meu Perfil</a>
                         <a href="#">Postar</a>
-                        <a href="#">Sair</a>
+                        <a href="#" class="logout">Sair</a>
                     </div>
                 </section>
             </div>
@@ -142,5 +143,6 @@
             </div>
         </section>
     </footer>
+    <script src="utils/DropDownProfile.js"></script>
 </body>
 </html>

@@ -60,12 +60,10 @@ header .isLogged .content .profile {
     border: 1px solid var(--primary-regular);
     border-radius: 100%;
     background-color: rgba(152, 138, 202, 0.7);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 header .isUser .content .profile {
@@ -75,34 +73,44 @@ header .isUser .content .profile {
 header .isLogged .content .profile span{
     font-family: 'Satoshi-Black', sans-serif;
     font-size: 1.6rem;
+    user-select: none;
+    cursor: pointer;
 }
 
-header .isLogged .content .profile button{
-    border: none;
-    background-color: var(--primary-white);
+header .isLogged .content .profile .dropdown{
+    display: none;
+    position: absolute;
+    top: 100px;
+    gap: 10px;
+}
+
+header .isLogged .content .profile .dropdown a{
+    color: var(--primary-black);
     font-family: Satoshi-Regular, sans-serif;
     font-weight: 600;
-    color: var(--primary-black);
+    height: 25px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 5px;
 }
 
-header .isLogged .content .profile .down{
-    display: none;
+header .isLogged .content .profile .dropdown a:hover{
+    border: 2px solid var(--segundary-gray);
+    border-radius: 5px;
 }
 
-header .isLogged .content .profile:hover .down {
-    position: absolute;
-    display: block;
-    top: 90px;
-}
-
-header .isLogged .content .profile:hover span{
-    display: block;
+header .isLogged .content .profile .dropdown .logout:hover{
+    border-color: red;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: slidein 1s normal;
 }
 
 main .initial_content{

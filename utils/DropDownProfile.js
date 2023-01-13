@@ -1,21 +1,20 @@
-function listenProfileClick(){
+function listenProfileClick() {
     const profile = document.getElementById('profile')
     const dropdown = document.getElementById('dropdown')
 
     profile.addEventListener('click', () => {
-        if(dropdown.classList.contains('open')) {
+        if(dropdown.classList.contains('open')){
             dropdown.classList.remove('open')
             dropdown.classList.add('close')
             dropdown.style.display = 'none'
-        } else{
+        }else {
             dropdown.classList.remove('close')
             dropdown.classList.add('open')
             dropdown.style.display = 'block'
         }
     },
-        false
-    )
+    false
+)
 }
-
 
 document.addEventListener('DOMContentLoaded', listenProfileClick, false)
