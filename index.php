@@ -33,7 +33,7 @@
                         <span id="profile">D</span>
                         <div id="dropdown" class="dropdown">
                             <a href="pages/profile">Meu Perfil</a>
-                            <a href="#">Postar</a>
+                            <a href="pages/post">Postar</a>
                             <a href="#" class="logout">Sair</a>
                         </div>
                     </section>

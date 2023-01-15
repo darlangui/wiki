@@ -1,0 +1,121 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .initial{
+    width: 100vw;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+main .initial h1{
+    font-size: 4rem;
+    width: 550px;
+    text-align: center;
+}
+
+main .initial img{
+    max-height: 300px;
+}
+
+main .add_publi{
+    margin-top: 100px;
+    width: 1080px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .add_publi .form{
+    width: 840px;
+    height: 700px;
+    border: 1px solid var(--segundary-gray);
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .add_publi .form:hover{
+    box-shadow: 1px 1px 3px 1px var(--primary-regular);
+}
+
+main .add_publi .form .title{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+main .add_publi .form label{
+    margin: 5px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .add_publi .form .textarea{
+    height: 300px;
+}
+
+main .add_publi .form textarea{
+    height: 300px;
+    width: 400px;
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid var(--segundary-gray);
+    background-color: var(--primary-white);
+    padding: 20px;
+}
+
+main .add_publi .form span{
+    font-size: 2rem;
+}
+
+main .add_publi .form input{
+    width: 400px;
+    height: 44px;
+    font-size: 1.6rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--segundary-gray);
+    text-align: center;
+    background-color: var(--primary-white);
+}
+
+main .add_publi .form button{
+    background-color: var(--primary-black);
+    border: 0;
+    border-radius: 10px;
+    width: 300px;
+    height: 60px;
+    color: var(--primary-white);
+    font-size: 2rem;
+    font-weight: 600;
+    transition: 1s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+main .add_publi .form button:hover{
+    background-color: var(--primary-regular);
+}
+
+main .publi {
+    margin-top: 50px;
+    width: 1080px;
+
+}
+
+main .publi span{
+    font-size: 3.5rem;
+    color: var(--primary-regular);
+    font-family: 'Satoshi-Bold', sans-serif;
+}

@@ -36,7 +36,7 @@
                         <span id="profile">D</span>
                         <div id="dropdown" class="dropdown">
                             <a href="#">Meu Perfil</a>
-                            <a href="#">Postar</a>
+                            <a href="../post">Postar</a>
                             <a href="#" class="logout">Sair</a>
                         </div>
                     </section>
