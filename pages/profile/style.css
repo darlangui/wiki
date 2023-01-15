@@ -182,3 +182,85 @@ main .formations .add_forma button:hover{
     box-shadow: 1px 1px 1px var(--primary-black);
 }
 
+main .formations .cards_formations {
+    margin-top: 50px;
+    width: 100%;
+}
+
+main .formations .cards_formations .card {
+    width: 320px;
+    height: 300px;
+    margin: 20px;
+    border-color: var(--primary-gray);
+    border-radius: 25px;
+    box-shadow: 1px 1px 1px 1px var(--primary-gray);
+    font-size: 1.6rem;
+    color: var(--primary-gray);
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-weight: 600;
+    padding: 20px;
+}
+
+main .formations .cards_formations .card .card_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .formations .cards_formations .card input{
+    border-style: none;
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+}
+
+main .formations .cards_formations .card label:not(:nth-child(5n)){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+main .formations .cards_formations .card .name_formation{
+    font-size: 2.5rem;
+    font-family: 'Satoshi-Black', sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+main .formations .cards_formations .card .type{
+    font-size: 1.8rem;
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 600;
+    width: 100%;
+    margin-left: 5px;
+}
+
+main .formations .cards_formations .card .cod{
+    font-size: 1.8rem;
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 600;
+}
+
+main .formations .cards_formations .card .date{
+    font-size: 1.8rem;
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 600;
+}
+
+main .formations .cards_formations .card .descript{
+    font-size: 1.6rem;
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 600;
+}
+
+main .formations .cards_formations .card #label_desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .formations .cards_formations .card #label_desc input{
+    width: 100%;
+    row-gap: normal;
+}

@@ -89,8 +89,34 @@
                 <h2>Formações e Especializações</h2>
                 <a href="#"><button>Adicionar +</button></a>
             </section>
-            <section class="card">
-
+            <section class="cards_formations">
+                <div class="card">
+                    <form class="card_form">
+                        <label for="name_formation">
+                            <input type="text" id="name_formation" name="name_formation" class="name_formation" value="Jornalismo" required>
+                        </label>
+                        <label for="type">
+                            <span>Tipo</span>
+                            <input type="text" id="type" class="type" value="Graduação" required>
+                        </label>
+                        <label for="cod">
+                            <span>Código</span>
+                            <input type="text" id="cod" class="cod" value="3643786" required>
+                        </label>
+                        <label for="date">
+                            <span>Data</span>
+                            <input type="date" id="date" class="date" value="2003-06-01" required>
+                        </label>
+                        <label id="label_desc" for="descript">
+                            <span>Descrição</span>
+                            <input type="text" id="descript" class="descript" value="Curso de graduação para jornalistas" placeholder="Digite a descrição de sua formação">
+                        </label>
+                        <div>
+                            <a href="#">Excluir</a>
+                            <button type="submit">Alterar</button>
+                        </div>
+                    </form>
+                </div>
             </section>
         </section>
     </main>
