@@ -78,35 +78,11 @@
             <h3>Todas as Publicações</h3>
             <section class="content_card">
                 <div class="card">
-                    <img src="" alt="">
+                    <div class="image_post"><img src="../../assets/image_woman.svg" alt=""></div>
                     <div class="resource">
-                        <h4>Resource</h4>
-                        <h3>Improving Your Site's SED</h3>
-                        <span>Build a unique experience  by missing and matching components.</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="" alt="">
-                    <div class="resource">
-                        <h4>Resource</h4>
-                        <h3>Improving Your Site's SED</h3>
-                        <span>Build a unique experience  by missing and matching components.</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="" alt="">
-                    <div class="resource">
-                        <h4>Resource</h4>
-                        <h3>Improving Your Site's SED</h3>
-                        <span>Build a unique experience  by missing and matching components.</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="" alt="">
-                    <div class="resource">
-                        <h4>Resource</h4>
-                        <h3>Improving Your Site's SED</h3>
-                        <span>Build a unique experience  by missing and matching components.</span>
+                            <h4>Resource</h4>
+                            <h3>Improving Your Site's SED</h3>
+                        <span>Build a unique experience  by missing</span>
                     </div>
                 </div>
             </section>

@@ -111,7 +111,6 @@ main .add_publi .form button:hover{
 main .publi {
     margin-top: 50px;
     width: 1080px;
-
 }
 
 main .publi span{
@@ -119,3 +118,99 @@ main .publi span{
     color: var(--primary-regular);
     font-family: 'Satoshi-Bold', sans-serif;
 }
+
+main .publi .card{
+    margin-top: 25px;
+    width: 460px;
+    background-color: var(--primary-white);
+    border-radius: 25px;
+    border-style: solid;
+    border-color: var(--primary-gray);
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+main .publi .card .image_post{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+main .publi .card img{
+    max-height: 333px;
+    max-width: 440px;
+    min-width: 440px;
+    min-height: 300px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+main .publi .card .resource{
+    margin-left: 25px;
+}
+
+main .publi .card .resource .cat_inpu{
+    font-size: 1.6rem;
+    color: var(--primary-gray);
+    margin-top: 25px;
+    border: 0;
+    background-color: var(--primary-white);
+    font-family: 'Satoshi-Bold', sans-serif;
+    width: 100%;
+}
+
+main .publi .card .resource .title_input{
+    color: var(--primary-black);
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    background-color: var(--primary-white);
+    font-family: 'Satoshi-Bold', sans-serif;
+}
+
+main .publi .card .resource .desc_input{
+    color: var(--primary-gray);
+    font-size: 1.3rem;
+    word-break: break-word;
+    border: 0;
+    background-color: var(--primary-white);
+    width: 100%;
+    resize: none;
+}
+
+main .publi .card .image_post input[type="file"]{
+    display: none;
+}
+
+main .publi .card .resource .option{
+    display: flex;
+    justify-content: space-around;
+}
+
+main .publi .card .resource .option a{
+    width: 120px;
+    height: 50px;
+    background-color: var(--primary-red);
+    border-radius: 10px;
+    color: var(--primary-white);
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+main .publi .card .resource .option button{
+    width: 120px;
+    height: 50px;
+    background-color: var(--primary-regular);
+    border-radius: 10px;
+    color: var(--primary-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Satoshi-Bold', sans-serif;
+}
+

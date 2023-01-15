@@ -57,8 +57,8 @@
                     <input type="text" name="cat" id="cat" placeholder="Digite a categoria da informação" required>
                 </label>
                 <label>
-                    <span>Descrição :</span>
-                    <input type="text" name="descri" id="descri" placeholder="Digite a descrição da informação" required>
+                    <span>Título :</span>
+                    <input type="text" name="descri" id="descri" placeholder="Digite o título da informação" required>
                 </label>
                 <label class="textarea">
                     <span>Informação :</span>
@@ -73,9 +73,30 @@
         </section>
         <section class="publi">
             <span>Suas Publicações</span>
-            <div class="card">
+            <form class="card">
+                <label>
+                    <input type="hidden" name="id" value="id">
+                </label>
+                <label class="image_post">
+                    <input type="file" name="image_alter" id="image_alter"><img src="../../assets/image_woman.svg" alt="">
+                </label>
+                <div class="resource">
+                    <label>
+                        <input type="text" name="categoria" id="categoria" class="cat_inpu" value="Resource">
+                    </label>
+                    <label>
+                        <input type="text" name="title" id="title"  class="title_input" value="Improving Your Site's SED">
+                    </label>
+                    <label>
+                        <textarea class="desc_input"> Build a unique experience  by missing and matching components.</textarea>
+                    </label>
+                    <div class="option">
+                        <a href="#">Excluir</a>
+                        <button type="submit">Alterar</button>
+                    </div>
+                </div>
+            </form>
 
-            </div>
         </section>
     </main>
     <footer>

@@ -102,18 +102,27 @@ main .main_content .content_card {
 main .main_content .content_card .card{
     margin-top: 25px;
     width: 460px;
-    height: 500px;
     background-color: var(--primary-white);
     border-radius: 25px;
     border-style: solid;
     border-color: var(--primary-gray);
     margin-bottom: 25px;
+    padding-bottom: 20px;
 }
 
 main .main_content .content_card .card img{
-    height: 333px;
-    width: 100%;
+    max-height: 333px;
+    max-width: 440px;
+    min-width: 440px;
+    min-height: 333px;
     border-radius: 20px;
+    margin-top: 10px;
+}
+
+main .main_content .content_card .card .image_post{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 main .main_content .content_card .card .resource {
