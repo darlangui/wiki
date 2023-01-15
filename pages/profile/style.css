@@ -194,7 +194,7 @@ main .formations .cards_formations .card {
     border-color: var(--primary-gray);
     border-radius: 25px;
     box-shadow: 1px 1px 1px 1px var(--primary-gray);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: var(--primary-gray);
     font-family: 'Satoshi-Bold', sans-serif;
     font-weight: 600;
@@ -216,7 +216,6 @@ main .formations .cards_formations .card input{
 main .formations .cards_formations .card label:not(:nth-child(5n)){
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 12px;
 }
 
@@ -229,29 +228,33 @@ main .formations .cards_formations .card .name_formation{
 }
 
 main .formations .cards_formations .card .type{
-    font-size: 1.8rem;
-    font-family: 'Satoshi-Regular', sans-serif;
-    font-weight: 600;
-    width: 100%;
-    margin-left: 5px;
-}
-
-main .formations .cards_formations .card .cod{
-    font-size: 1.8rem;
-    font-family: 'Satoshi-Regular', sans-serif;
-    font-weight: 600;
-}
-
-main .formations .cards_formations .card .date{
-    font-size: 1.8rem;
-    font-family: 'Satoshi-Regular', sans-serif;
-    font-weight: 600;
-}
-
-main .formations .cards_formations .card .descript{
     font-size: 1.6rem;
     font-family: 'Satoshi-Regular', sans-serif;
     font-weight: 600;
+    width: 80%;
+    text-align: center;
+}
+
+main .formations .cards_formations .card .cod{
+    font-size: 1.4rem;
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+main .formations .cards_formations .card .date{
+    font-size: 1.4rem;
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    width: 80%;
+}
+
+main .formations .cards_formations .card .descript{
+    font-size: 1.4rem;
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-weight: 600;
+    width: 100%;
 }
 
 main .formations .cards_formations .card #label_desc{
@@ -260,7 +263,45 @@ main .formations .cards_formations .card #label_desc{
     align-items: center;
 }
 
-main .formations .cards_formations .card #label_desc input{
-    width: 100%;
-    row-gap: normal;
+main .formations .cards_formations .card .option {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+main .formations .cards_formations .card .option button{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--primary-regular);
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-family: Satoshi-Bold, sans-serif;
+    color: var(--primary-white);
+}
+
+main .formations .cards_formations .card .option a{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--primary-red);
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-family: Satoshi-Bold, sans-serif;
+    color: var(--primary-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .formations .cards_formations .card .option button:hover{
+    width: 104px;
+    height: 42px;
+}
+
+main .formations .cards_formations .card .option a:hover{
+    width: 104px;
+    height: 42px;
 }

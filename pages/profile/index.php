@@ -21,7 +21,7 @@
                 </section>
                 <section class="center">
                     <ul>
-                        <li class="li_selected">BOAS VINDAS</li>
+                        <a href="../../"><li class="li_selected">BOAS VINDAS</li></a>
                         <a href="../posts"><li class="li_selected">POSTS</li></a>
                         <a href="../author"><li class="li_selected">AUTORES</li></a>
                         <li class="li_selected">AJUDA</li>
@@ -109,9 +109,9 @@
                         </label>
                         <label id="label_desc" for="descript">
                             <span>Descrição</span>
-                            <input type="text" id="descript" class="descript" value="Curso de graduação para jornalistas" placeholder="Digite a descrição de sua formação">
+                            <input type="text" id="descript" class="descript" value="Curso de graduação para jornalistas na UFSM" placeholder="Digite a descrição de sua formação">
                         </label>
-                        <div>
+                        <div class="option">
                             <a href="#">Excluir</a>
                             <button type="submit">Alterar</button>
                         </div>
