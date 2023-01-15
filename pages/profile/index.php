@@ -87,7 +87,7 @@
         <section class="formations">
             <section class="add_forma">
                 <h2>Formações e Especializações</h2>
-                <a href="#"><button>Adicionar +</button></a>
+                <a class="openModal" id="openModal"><button>Adicionar +</button></a>
             </section>
             <section class="cards_formations">
                 <div class="card">
@@ -119,6 +119,40 @@
                 </div>
             </section>
         </section>
+
+        <section id="modal" class="modal off">
+            <div class="modal_content">
+                <section class="exit">
+                    <span>Adicionar Formação/Especialização</span><img src="../../assets/exit.svg" alt="Sair" id="exit"></section>
+                <section class="main">
+                    <form class="main">
+                        <label>
+                            <span>Nome:</span>
+                            <input type="text" name="nome" placeholder="Digite o nome da Especialização/Formação" required>
+                        </label>
+                        <label>
+                            <span>Tipo:</span>
+                            <input type="text" name="tipo" placeholder="Digite o tipo de Especialização/Formação" required>
+                        </label>
+                        <label>
+                            <span>Código:</span>
+                            <input type="text" name="tipo" onkeypress="return onlyNumbers()" placeholder="Digite o código da Especialização/Formação">
+                        </label>
+                        <label>
+                            <span>Data:</span>
+                            <input type="date" name="tipo" placeholder="Digite a data de conclusão" required>
+                        </label>
+                        <label>
+                            <span>Descrição:</span>
+                            <input type="text" name="tipo" placeholder="Comente um pouco sobre a descrição de sua Especialização/Formação">
+                        </label>
+                        <div class="option_main">
+                            <button type="submit">Adicionar</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
     </main>
     <footer>
         <section class="option_content">
@@ -145,5 +179,7 @@
         </section>
     </footer>
     <script src="../../utils/DropDownProfile.js"></script>
+    <script src="../../utils/ModelOpen.js"></script>
+    <script src="../../utils/OnlyNumbers.js"></script>
 </body>
 </html>

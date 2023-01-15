@@ -305,3 +305,104 @@ main .formations .cards_formations .card .option a:hover{
     width: 104px;
     height: 42px;
 }
+
+main .modal{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    top: 70px;
+    position: fixed;
+}
+
+main .modal .modal_content{
+    width: 800px;
+    height: 600px;
+    background-color: var(--primary-white);
+    z-index: 1;
+    border: 3px solid var(--segundary-gray);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .modal.off{
+    display: none;
+}
+
+main .modal .modal_content .exit{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 16px;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+main .modal .modal_content .exit span{
+    margin-left: 16px;
+}
+
+main .modal .modal_content .exit img{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+main .modal .modal_content .main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+main .modal .modal_content .main input{
+    width: 400px;
+    height: 44px;
+    border-radius: 15px;
+    border: 1px solid var(--primary-gray);
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 10px;
+    text-align: center;
+}
+
+main .modal .modal_content .main span{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+main .modal .modal_content .main label{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20%;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+main .modal .modal_content .main button{
+    margin-top: 40px;
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    width: 70%;
+    height: 56px;
+    border-radius: 15px;
+    border: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: background 0.5s;
+    cursor: pointer;
+}
+
+main .modal .modal_content .main button:hover{
+    background-color: var(--primary-regular);
+}
+
+main .modal .modal_content .main .option_main{
+    display: flex;
+    justify-content: center;
+}
