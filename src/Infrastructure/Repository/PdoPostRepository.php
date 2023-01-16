@@ -2,6 +2,7 @@
 
 namespace wiki\src\Infrastructure\Repository;
 
+use wiki\src\Domain\Model\Post;
 use wiki\src\Domain\Repository\PostsRepository;
 
 class PdoPostRepository implements PostsRepository
@@ -15,5 +16,10 @@ class PdoPostRepository implements PostsRepository
     public function authorPosts(): array
     {
         return [];
+    }
+
+    public function save(Post $post): bool
+    {
+        return false;
     }
 }
