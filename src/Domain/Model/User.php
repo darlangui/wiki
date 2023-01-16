@@ -53,9 +53,8 @@ class User
         $this->email = $newEmail;
     }
 
-    public function changeImageProfile(string $newImageProfile) : void{
+    public function changeImageProfile(string $newImageProfile) : void
+    {
         $this->imageProfile = $newImageProfile;
     }
-
-    
 }
