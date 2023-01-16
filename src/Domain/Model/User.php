@@ -7,6 +7,7 @@ class User
     private string $name;
     private string $email;
     private string $password;
+    private string $imageProfile;
 
     public function __construct(int $id, string $name, string $email, string $password)
     {
@@ -32,9 +33,14 @@ class User
     }
 
 
-    public function password() : ?string
+    public function password() : string
     {
         return $this->password;
+    }
+
+    public function imageProfile() : string
+    {
+        return $this->imageProfile;
     }
 
     public function changeName(string $newName) : void
@@ -46,4 +52,10 @@ class User
     {
         $this->email = $newEmail;
     }
+
+    public function changeImageProfile(string $newImageProfile) : void{
+        $this->imageProfile = $newImageProfile;
+    }
+
+    
 }
