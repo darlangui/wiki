@@ -2,18 +2,22 @@
 
 namespace wiki\src\Domain\Model;
 
+use Cassandra\Date;
+
 class Post
 {
     private readonly int $id;
     private string $section;
     private string $title;
     private string $information;
+    private \DateTimeImmutable $date;
 
-    public function __construct(string $section, string $title, string $information)
+    public function __construct(string $section, string $title, string $information, \DateTimeImmutable $date)
     {
         $this->section = $section;
         $this->title = $title;
         $this->information = $information;
+        $this->date = $date;
     }
 
     public function section(): string
@@ -26,9 +30,14 @@ class Post
         return $this->title;
     }
 
-    public function information() : string
+    public function information(): string
     {
         return $this->information;
+    }
+
+    public function date(): \DateTimeImmutable
+    {
+        return $this->date;
     }
 
     public function alterSection(string $section) : void
