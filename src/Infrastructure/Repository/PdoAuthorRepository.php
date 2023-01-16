@@ -16,11 +16,6 @@ class PdoAuthorRepository implements AuthorsRepository
         return [];
     }
 
-    public function authorPosts(): array
-    {
-       return [];
-    }
-
     public function save(User $user): bool
     {
         return false;
