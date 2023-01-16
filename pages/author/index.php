@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <div class="isLogged"> <!-- Tags content: isLogged or isAdmin or isUser -->
+        <div class="isLogged Admin"> <!-- Tags content: isLogged or isAdmin or isUser -->
             <div class="content">
                 <section class="left">
                     <a href="../../index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
@@ -37,6 +37,7 @@
                         <div id="dropdown" class="dropdown">
                             <a href="../profile">Meu Perfil</a>
                             <a href="../post">Postar</a>
+                            <a href="../profreader" class="profreader">Analisar</a>
                             <a href="#" class="logout">Sair</a>
                         </div>
                     </section>

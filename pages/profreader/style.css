@@ -1,0 +1,116 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .initial{
+    width: 100vw;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+main .initial h1{
+    font-size: 4rem;
+    width: 550px;
+    text-align: center;
+}
+
+main .initial img{
+    max-width: 300px;
+}
+
+main .info{
+    width: 1080px;
+}
+
+main .info span{
+    font-size: 3.5rem;
+    color: var(--primary-black);
+    font-family: 'Satoshi-Bold', sans-serif;
+}
+
+main .cards {
+    margin-top: 50px;
+    width: 1080px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main  .cards .card{
+    margin-top: 25px;
+    width: 460px;
+    background-color: var(--primary-white);
+    border-radius: 25px;
+    border-style: solid;
+    border-color: var(--primary-gray);
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+main .cards .card img{
+    max-height: 333px;
+    max-width: 440px;
+    min-width: 440px;
+    min-height: 333px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+main  .cards .card .image_post{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main  .cards .card .resource {
+    margin-left: 25px;
+}
+
+main  .cards .card .resource h4 {
+    font-size: 1.6rem;
+    color: var(--primary-gray);
+    margin-top: 25px;
+}
+
+main .cards .card .resource h3{
+    color: var(--primary-black);
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main .cards .card .resource span{
+    color: var(--primary-gray);
+    font-size: 1.3rem;
+}
+
+main .cards .card .option{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+main .cards .card .option .rej button{
+    background-color: var(--primary-red);
+}
+
+main .cards button{
+    width: 120px;
+    height: 50px;
+    border: 0;
+    background-color: var(--primary-green);
+    border-radius: 10px;
+    color: var(--primary-white);
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+}

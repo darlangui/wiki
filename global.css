@@ -24,6 +24,7 @@ html {
     --primary-white: #F7FBFE;
     --segundary-black: #000000;
     --primary-red: #C23333;
+    --primary-green: #21C628;
 }
 
 @keyframes  slidein{

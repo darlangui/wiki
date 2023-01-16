@@ -112,6 +112,14 @@ header .isLogged .content .profile .dropdown .logout:hover{
     border-color: red;
 }
 
+header .isLogged .content .profile .dropdown .profreader{
+    display: none;
+}
+
+header .isLogged.Admin .profile .dropdown .profreader{
+    display: flex;
+}
+
 main {
     display: flex;
     flex-direction: column;

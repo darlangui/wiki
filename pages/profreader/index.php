@@ -1,1 +1,106 @@
-<?php
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Analisar</title>
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../fonts/Fonts/WEB/css/satoshi.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../assets/logo_wk.svg">
+</head>
+<body>
+    <header>
+        <div class="isLogged Admin"> <!-- Tags content: isLogged or isAdmin or isUser -->
+            <div class="content">
+                <section class="left">
+                    <a href="../../index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
+                </section>
+                <section class="center">
+                    <ul>
+                        <a href="../../"><li class="li_selected">BOAS VINDAS</li></a>
+                        <a href="../posts"><li class="li_selected">POSTS</li></a>
+                        <a href="../author"><li class="li_selected">AUTORES</li></a>
+                        <li class="li_selected">AJUDA</li>
+                    </ul>
+                </section>
+                <section class="right">
+                    <a href="pages/login" ><button class="button_white">ENTRAR</button></a>
+                    <a href="pages/register"><button class="button_black">REGISTRAR-SE</button></a>
+                </section>
+                <section class="right_profile">
+                    <section class="profile">
+                        <span id="profile">D</span>
+                        <div id="dropdown" class="dropdown">
+                            <a href="../profile">Meu Perfil</a>
+                            <a href="../post">Postar</a>
+                            <a href="#" class="profreader">Analisar</a>
+                            <a href="#" class="logout">Sair</a>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="initial">
+            <img src="../../assets/ilust_profe.svg" alt="Ilustração de Analisar">
+            <h1>Analise artigos de outros utilizadores para determinar se a informação é veridica.</h1>
+        </section>
+        <section class="info">
+            <span>Publicações para análise</span>
+            <div class="cards">
+                <div class="card">
+                    <div class="image_post"><img src="../../assets/image_woman.svg" alt=""></div>
+                    <div class="resource">
+                        <h4>Resource</h4>
+                        <h3>Improving Your Site's SED</h3>
+                        <span>Build a unique experience  by missing</span>
+                    </div>
+                    <div class="option">
+                        <form class="rej">
+                            <label>
+                                <input type="hidden" name="id" value="id">
+                            </label>
+                            <button type="submit">Rejeitar</button>
+                        </form>
+                        <form>
+                            <label>
+                                <input type="hidden" name="id" value="id">
+                            </label>
+                            <button type="submit">Aceitar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="option_content">
+            <a href="index.php"><img src="assets/logo_wiki_white.svg" alt="Logo da WIKING"></a>
+            <ul>
+                <li><span>info</span></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+            <ul>
+                <li><span>social</span></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </section>
+        <section class="last_linear_content">
+            <div class="linear"></div>
+            <div class="last">
+                <h3>2023</h3>
+                <h3>Tamplete by Darlan</h3>
+                <h3>2023</h3>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
