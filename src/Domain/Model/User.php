@@ -8,9 +8,11 @@ class User
     private string $email;
     private string $password;
     private string $imageProfile;
+    private bool $status;
     /** @var Post[]  */
     private array $posts;
-    private string $status;
+    /** @var Formation[] */
+    private array $formations;
 
 
     public function __construct(int $id, string $name, string $email, string $password, string $imageProfile)
@@ -22,7 +24,8 @@ class User
         $this->imageProfile = $imageProfile;
     }
 
-    public function id() : ?int
+    // getters
+    public function id() : int
     {
         return $this->id;
     }
@@ -48,10 +51,24 @@ class User
         return $this->imageProfile;
     }
 
-    public function status() : string
+    public function status() : bool
     {
         return $this->status;
     }
+
+    /** @return Post[] */
+    public function posts() : array
+    {
+        return $this->posts;
+    }
+
+    /** @return Formation[] */
+    public function formation() : array
+    {
+        return $this->formations;
+    }
+
+    //setters
 
     public function changeName(string $newName) : void
     {
@@ -68,19 +85,19 @@ class User
         $this->imageProfile = $newImageProfile;
     }
 
+
+    public function changeStatus(bool $newStatus) : void
+    {
+        $this->status = $newStatus;
+    }
+
     public function addPost(Post $post) : void
     {
         $this->posts[] = $post;
     }
 
-    /** @return Post[] */
-    public function posts() : array
+    public function addFormation(Formation $formation) : void
     {
-        return $this->posts;
-    }
-
-    public function changeStatus(string $newStatus) : void
-    {
-        $this->status = $newStatus;
+        $this->formations[] = $formation;
     }
 }
