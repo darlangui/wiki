@@ -7,6 +7,9 @@ use wiki\src\Domain\Repository\PostsRepository;
 
 class PdoPostRepository implements PostsRepository
 {
+    public function __construct()
+    {
+    }
 
     public function allPosts(): array
     {

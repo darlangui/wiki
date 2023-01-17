@@ -10,14 +10,16 @@ class Post
     private string $section;
     private string $title;
     private string $information;
+    private string $imagePost;
     private \DateTimeImmutable $date;
 
-    public function __construct(string $section, string $title, string $information, \DateTimeImmutable $date)
+    public function __construct(string $section, string $title, string $information, string $imagePost, \DateTimeImmutable $date)
     {
         $this->section = $section;
         $this->title = $title;
         $this->information = $information;
         $this->date = $date;
+        $this->imagePost = $imagePost;
     }
 
     public function section(): string

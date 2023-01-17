@@ -8,13 +8,16 @@ class User
     private string $email;
     private string $password;
     private string $imageProfile;
+    /** @var Post[]  */
+    private array $posts;
 
-    public function __construct(int $id, string $name, string $email, string $password)
+    public function __construct(int $id, string $name, string $email, string $password, string $imageProfile)
     {
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
+        $this->imageProfile = $imageProfile;
     }
 
     public function id() : ?int
@@ -56,5 +59,16 @@ class User
     public function changeImageProfile(string $newImageProfile) : void
     {
         $this->imageProfile = $newImageProfile;
+    }
+
+    public function addPost(Post $post) : void
+    {
+        $this->posts[] = $post;
+    }
+
+    /** @return Post[] */
+    public function posts() : array
+    {
+        return $this->posts;
     }
 }
