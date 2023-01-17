@@ -19,4 +19,51 @@ class Formation
         $this->date = $date;
     }
 
+    // getters
+    public function id() : string
+    {
+        return $this->id;
+    }
+
+    public function type() : string
+    {
+        return $this->type;
+    }
+
+    public function credencialCode() : string
+    {
+        return $this->credencial_code;
+    }
+
+    public function description() : string
+    {
+        return $this->description;
+    }
+
+    public function date() : \DateTimeImmutable
+    {
+        return $this->date;
+    }
+
+    // setters
+
+    public function changeType(string $type) : void
+    {
+        $this->type = $type;
+    }
+
+    public function changeCredencialCode(string $credencial_code) : void
+    {
+        $this->credencial_code = $credencial_code;
+    }
+
+    public function changeDescription(string $description) : void
+    {
+        $this->description = $description;
+    }
+
+    public function changeDate(\DateTimeImmutable $date) : void
+    {
+        $this->date = $date;
+    }
 }

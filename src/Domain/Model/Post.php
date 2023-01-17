@@ -12,48 +12,85 @@ class Post
     private string $information;
     private string $imagePost;
     private \DateTimeImmutable $date;
+    private string $status;
 
-    public function __construct(string $section, string $title, string $information, string $imagePost, \DateTimeImmutable $date)
+    public function __construct(string $section, string $title, string $information, string $imagePost, \DateTimeImmutable $date, string $status)
     {
         $this->section = $section;
         $this->title = $title;
         $this->information = $information;
         $this->date = $date;
         $this->imagePost = $imagePost;
+        $this->status = $status;
     }
 
-    public function section(): string
+    // getters
+    public function id() : int
+    {
+        return $this->id;
+    }
+
+    public function section() : string
     {
         return $this->section;
     }
 
-    public function title(): string
+    public function title() : string
     {
         return $this->title;
     }
 
-    public function information(): string
+    public function information() : string
     {
         return $this->information;
     }
 
-    public function date(): \DateTimeImmutable
+    public function imagePost() : string
+    {
+        return $this->imagePost;
+    }
+
+    public function date() : \DateTimeImmutable
     {
         return $this->date;
     }
 
-    public function alterSection(string $section) : void
+    public function status() : string
+    {
+        return $this->status;
+    }
+
+    //setters
+
+    public function changeSection(string $section) : void
     {
         $this->section = $section;
     }
 
-    public function alterTitle(string $title) : void
+    public function changeTitle(string $title) : void
     {
         $this->title = $title;
     }
 
-    public function alterInformation(string $information) : void
+    public function changeInformation(string $information) : void
     {
         $this->information = $information;
     }
+
+    public function changeImagePost(string $imagePost) : void
+    {
+        $this->imagePost = $imagePost;
+    }
+
+    public function changeDate(\DateTimeImmutable $date) : void
+    {
+        $this->date = $date;
+    }
+
+    public function changeStatus(string $status) : void
+    {
+        $this->status = $status;
+    }
+
+
 }
