@@ -16,6 +16,7 @@ class PdoAuthorRepository implements AuthorsRepository
         $this->connection = $connection;
     }
 
+    //
     private function hydrateAuthorList(\PDOStatement $stmt) : array{
         $authorDataList = $stmt->fetchAll();
         $authorList = [];
@@ -67,4 +68,3 @@ class PdoAuthorRepository implements AuthorsRepository
     }
 
 }
-

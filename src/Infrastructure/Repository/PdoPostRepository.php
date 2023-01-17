@@ -16,11 +16,6 @@ class PdoPostRepository implements PostsRepository
         return [];
     }
 
-    public function authorPosts(): array
-    {
-        return [];
-    }
-
     public function save(Post $post): bool
     {
         return false;

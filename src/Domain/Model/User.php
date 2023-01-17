@@ -10,6 +10,8 @@ class User
     private string $imageProfile;
     /** @var Post[]  */
     private array $posts;
+    private string $status;
+
 
     public function __construct(int $id, string $name, string $email, string $password, string $imageProfile)
     {
@@ -46,6 +48,11 @@ class User
         return $this->imageProfile;
     }
 
+    public function status() : string
+    {
+        return $this->status;
+    }
+
     public function changeName(string $newName) : void
     {
         $this->name = $newName;
@@ -70,5 +77,10 @@ class User
     public function posts() : array
     {
         return $this->posts;
+    }
+
+    public function changeStatus(string $newStatus) : void
+    {
+        $this->status = $newStatus;
     }
 }
