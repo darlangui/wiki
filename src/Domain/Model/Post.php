@@ -2,7 +2,6 @@
 
 namespace wiki\src\Domain\Model;
 
-use Cassandra\Date;
 
 class Post
 {

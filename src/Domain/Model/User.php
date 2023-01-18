@@ -15,13 +15,14 @@ class User
     private array $formations;
 
 
-    public function __construct(int $id, string $name, string $email, string $password, string $imageProfile)
+    public function __construct(int $id, string $name, string $email, string $password, string $imageProfile, bool $status)
     {
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
         $this->imageProfile = $imageProfile;
+        $this->status = $status;
     }
 
     // getters
