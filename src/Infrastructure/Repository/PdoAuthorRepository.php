@@ -46,9 +46,8 @@ class PdoAuthorRepository implements AuthorsRepository
         return false;
     }
 
-    public function fillPostsOf(User $author) : void
+    private function fillPostsOf(User $author) : void
     {
-        // Colocar uma query com inner join para pegar informações de status, section, information ...
         $sqlQuery = '';
         $stmt = $this->connection->prepare($sqlQuery);
         $stmt->bindValue(1, $author->id(), PDO::PARAM_INT);
@@ -66,5 +65,4 @@ class PdoAuthorRepository implements AuthorsRepository
             $author->addPost($post);
         }
     }
-
 }

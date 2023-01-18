@@ -7,4 +7,5 @@ use wiki\src\Domain\Model\Formation;
 interface FormationRepository
 {
     public function save(Formation $formation) : bool;
+    public function remove(Formation $formation) : bool;
 }
