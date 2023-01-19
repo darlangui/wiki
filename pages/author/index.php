@@ -12,6 +12,25 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../../assets/logo_wk.svg">
 </head>
+<?php
+    include_once('../../vendor/autoload.php');
+    use \pdo\Domain\Model\User;
+    use \pdo\Infrastructure\Repository\PdoAuthorRepository;
+    function allAuthors(){
+        $authors = new PdoAuthorRepository(\pdo\Infrastructure\Persistence\CreateConnectionPDO::createConnection());
+        $allAuthors = $authors->allAuthors();
+        foreach ($allAuthors as $author){
+            echo "
+                <div class='card'>
+                    <img src='../../assets/{$author->imageProfile()}' alt=''>
+                    <h4>{$author->name()}</h4>
+                    <h5></h5>
+                    <a href='#'><span>Saiba mais</span></a>
+                </div>
+            ";
+        }
+    }
+?>
 <body>
     <header>
         <div class="isLogged Admin"> <!-- Tags content: isLogged or isAdmin or isUser -->
@@ -61,42 +80,9 @@
             <h2>Todos os Autores</h2>
             <h3>Os mais famosos e mais bem avaliados de toda a Internet.</h3>
             <div class="card_authors">
-                <div class="card">
-                    <img src="../../assets/image_woman.svg" alt="">
-                    <h4>Sofia Ester</h4>
-                    <h5>Autora de diversos livros e artigos famosos internacionalmente.</h5>
-                    <a href="#"><span>Saiba mais</span></a>
-                </div>
-                <div class="card">
-                    <img src="../../assets/image_woman.svg" alt="">
-                    <h4>Sofia Ester</h4>
-                    <h5>Autora de diversos livros e artigos famosos internacionalmente.</h5>
-                    <a href="#"><span>Saiba mais</span></a>
-                </div>
-                <div class="card">
-                    <img src="../../assets/image_woman.svg" alt="">
-                    <h4>Sofia Ester</h4>
-                    <h5>Autora de diversos livros e artigos famosos internacionalmente.</h5>
-                    <a href="#"><span>Saiba mais</span></a>
-                </div>
-                <div class="card">
-                    <img src="../../assets/image_woman.svg" alt="">
-                    <h4>Sofia Ester</h4>
-                    <h5>Autora de diversos livros e artigos famosos internacionalmente.</h5>
-                    <a href="#"><span>Saiba mais</span></a>
-                </div>
-                <div class="card">
-                    <img src="../../assets/image_woman.svg" alt="">
-                    <h4>Sofia Ester</h4>
-                    <h5>Autora de diversos livros e artigos famosos internacionalmente.</h5>
-                    <a href="#"><span>Saiba mais</span></a>
-                </div>
-                <div class="card">
-                    <img src="../../assets/image_woman.svg" alt="">
-                    <h4>Sofia Ester</h4>
-                    <h5>Autora de diversos livros e artigos famosos internacionalmente.</h5>
-                    <a href="#"><span>Saiba mais</span></a>
-                </div>
+               <?php
+                    allAuthors();
+               ?>
             </div>
         </section>
     </main>

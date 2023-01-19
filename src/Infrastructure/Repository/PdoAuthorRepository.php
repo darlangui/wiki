@@ -23,11 +23,12 @@ class PdoAuthorRepository implements AuthorsRepository
 
         foreach ($authorDataList as $authorData){
             $authorList[] = new User(
-                $authorData['id'],
+                $authorData['id_user'],
                 $authorData['name'],
-                $authorData['email'],
+                $authorData['login'],
                 $authorData['password'],
-                $authorData['image']
+                $authorData['image'],
+                false
             );
         }
         return $authorList;
@@ -35,7 +36,7 @@ class PdoAuthorRepository implements AuthorsRepository
 
     public function allAuthors(): array
     {
-        $sqlQuery = 'SELECT * FROM authors';
+        $sqlQuery = 'SELECT user.id_user, user.name, user.login, user.password, user.image FROM author INNER JOIN user ON user.id_user = author.User_id_user';
         $stmt = $this->connection->query($sqlQuery);
 
         return $this->hydrateAuthorList($stmt);
