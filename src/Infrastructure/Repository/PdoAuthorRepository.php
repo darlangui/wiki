@@ -1,10 +1,10 @@
 <?php
 
-namespace wiki\src\Infrastructure\Repository;
+namespace pdo\Infrastructure\Repository;
 
-use wiki\src\Domain\Model\Post;
-use wiki\src\Domain\Model\User;
-use wiki\src\Domain\Repository\AuthorsRepository;
+use pdo\Domain\Model\Post;
+use pdo\Domain\Model\User;
+use pdo\Domain\Repository\AuthorsRepository;
 use PDO;
 
 class PdoAuthorRepository implements AuthorsRepository

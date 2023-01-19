@@ -1,6 +1,6 @@
 <?php
 
-namespace wiki\src\Domain\Model;
+namespace pdo\Domain\Model;
 
 class Proofeader extends User
 {

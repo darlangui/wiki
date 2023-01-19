@@ -1,8 +1,8 @@
 <?php
 
-namespace wiki\src\Domain\Repository;
+namespace pdo\Domain\Repository;
 
-use wiki\src\Domain\Model\User;
+use pdo\Domain\Model\User;
 
 interface AuthorsRepository
 {

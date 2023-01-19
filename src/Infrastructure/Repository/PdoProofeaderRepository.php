@@ -1,9 +1,9 @@
 <?php
 
-namespace wiki\src\Infrastructure\Repository;
+namespace pdo\Infrastructure\Repository;
 
-use wiki\src\Domain\Model\Post;
-use wiki\src\Domain\Repository\ProofeaderRepository;
+use pdo\Domain\Model\Post;
+use pdo\Domain\Repository\ProofeaderRepository;
 
 class PdoProofeaderRepository implements ProofeaderRepository
 {

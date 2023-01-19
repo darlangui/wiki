@@ -1,10 +1,10 @@
 <?php
 
-namespace wiki\src\Infrastructure\Repository;
+namespace pdo\Infrastructure\Repository;
 
-use wiki\src\Domain\Model\Formation;
-use wiki\src\Domain\Model\Post;
-use wiki\src\Domain\Repository\FormationRepository;
+use pdo\Domain\Model\Formation;
+use pdo\Domain\Model\Post;
+use pdo\Domain\Repository\FormationRepository;
 
 class PdoFormationRepository implements FormationRepository
 {

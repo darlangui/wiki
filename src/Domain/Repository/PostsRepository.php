@@ -1,8 +1,8 @@
 <?php
 
-namespace wiki\src\Domain\Repository;
+namespace pdo\Domain\Repository;
 
-use wiki\src\Domain\Model\Post;
+use pdo\Domain\Model\Post;
 
 interface PostsRepository
 {
