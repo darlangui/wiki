@@ -78,7 +78,10 @@ main .all_authors .card_authors {
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
+
 }
 
 main .all_authors .card_authors .card{
@@ -87,6 +90,7 @@ main .all_authors .card_authors .card{
     border-color: var(--primary-gray);
     border-radius: 25px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 1px 1px 3px 1px var(--primary-regular);

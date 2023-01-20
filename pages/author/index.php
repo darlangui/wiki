@@ -25,6 +25,7 @@
                     <img src='../../assets/{$author->image()}' alt='Imagem do Author'>
                     <h4>{$author->name()}</h4>
                     <h5>{$author->description()}</h5>
+                    <h5>Entre em contato <i>{$author->email()}</i></h5>
                     <a href='#'><span>Saiba mais</span></a>
                 </div>
             ";
