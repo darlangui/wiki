@@ -7,25 +7,24 @@ class User
     private string $name;
     private string $email;
     private string $password;
-    private string $imageProfile;
-    private bool $status;
+    private string $image;
+    private string $description;
     /** @var Post[]  */
     private array $posts;
-    /** @var Formation[] */
-    private array $formations;
+    /** @var Specialization[] */
+    private array $specialization;
 
-
-    public function __construct(int $id, string $name, string $email, string $password, string $imageProfile, bool $status)
+    public function __construct(int $id, string $name, string $email, string $password, string $description, string $image)
     {
         $this->id = $id;
-        $this->name = $name;
         $this->email = $email;
+        $this->name = $name;
         $this->password = $password;
-        $this->imageProfile = $imageProfile;
-        $this->status = $status;
+        $this->image = $image;
+        $this->description = $description;
     }
 
-    // getters
+    // Getters
     public function id() : int
     {
         return $this->id;
@@ -36,60 +35,46 @@ class User
         return $this->name;
     }
 
-    public function email() : string
-    {
-        return $this->email;
-    }
-
-
-    public function password() : string
+    public function password(): string
     {
         return $this->password;
     }
 
-    public function imageProfile() : string
+    public function email(): string
     {
-        return $this->imageProfile;
+        return $this->email;
     }
 
-    public function status() : bool
+    public function image(): string
     {
-        return $this->status;
+        return $this->image;
     }
 
-    /** @return Post[] */
-    public function posts() : array
+    public function description() : string
     {
-        return $this->posts;
+        return $this->description;
     }
 
-    /** @return Formation[] */
-    public function formation() : array
+    // Setters
+
+    public function changeName(string $name): void
     {
-        return $this->formations;
+        $this->name = $name;
     }
 
-    //setters
-
-    public function changeName(string $newName) : void
+    public function changeEmail(string $email) : void
     {
-        $this->name = $newName;
+        $this->email = $email;
     }
 
-    public function changeEmail(string $newEmail) : void
+    public function changeDescription(string $description) : void
     {
-        $this->email = $newEmail;
+        $this->description = $description;
     }
 
-    public function changeImageProfile(string $newImageProfile) : void
+    public function changeImage(string $image): void
     {
-        $this->imageProfile = $newImageProfile;
-    }
-
-
-    public function changeStatus(bool $newStatus) : void
-    {
-        $this->status = $newStatus;
+        $this->image = $image;
     }
 
     public function addPost(Post $post) : void
@@ -97,8 +82,8 @@ class User
         $this->posts[] = $post;
     }
 
-    public function addFormation(Formation $formation) : void
+    public function addSpecialization(Specialization $specialization) : void
     {
-        $this->formations[] = $formation;
+        $this->$specialization[] = $specialization;
     }
 }

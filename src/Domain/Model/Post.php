@@ -2,71 +2,59 @@
 
 namespace pdo\Domain\Model;
 
-
 class Post
 {
     private readonly int $id;
-    private string $section;
     private string $title;
     private string $information;
-    private string $imagePost;
     private \DateTimeImmutable $date;
     private string $status;
+    private string $image;
 
-    public function __construct(string $section, string $title, string $information, string $imagePost, \DateTimeImmutable $date, string $status)
+    public function __construct(int $id, string $title, string $information, \DateTimeImmutable $date, string $status, string $image)
     {
-        $this->section = $section;
+        $this->id = $id;
         $this->title = $title;
         $this->information = $information;
         $this->date = $date;
-        $this->imagePost = $imagePost;
         $this->status = $status;
+        $this->image = $image;
     }
 
-    // getters
-    public function id() : int
+    // Getters
+    public function id(): int
     {
         return $this->id;
     }
 
-    public function section() : string
-    {
-        return $this->section;
-    }
-
-    public function title() : string
+    public function title(): string
     {
         return $this->title;
     }
 
-    public function information() : string
+    public function information(): string
     {
         return $this->information;
     }
 
-    public function imagePost() : string
+    public function date(\DateTimeImmutable $date): void
     {
-        return $this->imagePost;
+        $this->date = $date;
     }
 
-    public function date() : \DateTimeImmutable
-    {
-        return $this->date;
-    }
-
-    public function status() : string
+    public function status(): string
     {
         return $this->status;
     }
 
-    //setters
-
-    public function changeSection(string $section) : void
+    public function image(): string
     {
-        $this->section = $section;
+        return $this->image;
     }
 
-    public function changeTitle(string $title) : void
+    // Setters
+
+    public function changeTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -76,14 +64,9 @@ class Post
         $this->information = $information;
     }
 
-    public function changeImagePost(string $imagePost) : void
+    public function changeImage(string $image) : void
     {
-        $this->imagePost = $imagePost;
-    }
-
-    public function changeDate(\DateTimeImmutable $date) : void
-    {
-        $this->date = $date;
+        $this->image = $image;
     }
 
     public function changeStatus(string $status) : void

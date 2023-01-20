@@ -14,17 +14,17 @@
 </head>
 <?php
     include_once('../../vendor/autoload.php');
-    use \pdo\Domain\Model\User;
-    use \pdo\Infrastructure\Repository\PdoAuthorRepository;
+    use pdo\Infrastructure\Repository\PdoUserRepository;
+    use pdo\Infrastructure\Persistence\CreateConnection;
     function allAuthors(){
-        $authors = new PdoAuthorRepository(\pdo\Infrastructure\Persistence\CreateConnectionPDO::createConnection());
-        $allAuthors = $authors->allAuthors();
+        $authors = new PdoUserRepository(CreateConnection::createConnection());
+        $allAuthors = $authors->allUsersAreAuthors();
         foreach ($allAuthors as $author){
             echo "
-                <div class='card'>
-                    <img src='../../assets/{$author->imageProfile()}' alt=''>
+                  <div class='card'>
+                    <img src2='../../assets/{$author->image()}' alt='Imagem do Author'>
                     <h4>{$author->name()}</h4>
-                    <h5></h5>
+                    <h5>{$author->description()}</h5>
                     <a href='#'><span>Saiba mais</span></a>
                 </div>
             ";

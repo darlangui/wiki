@@ -2,22 +2,19 @@
 
 namespace pdo\Infrastructure\Repository;
 
-use pdo\Domain\Model\Post;
-use pdo\Domain\Repository\PostsRepository;
+use pdo\Domain\Repository\PostRepository;
 
-class PdoPostRepository implements PostsRepository
+class PdoPostRepository implements PostRepository
 {
-    public function __construct()
+    private \PDO $connection;
+
+    public function __construct(PDO $connection)
     {
+        $this->connection = $connection;
     }
 
-    public function allPosts(): array
+    public function allPosts() : array
     {
-        return [];
-    }
 
-    public function save(Post $post): bool
-    {
-        return false;
     }
 }
