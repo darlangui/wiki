@@ -22,7 +22,7 @@
         foreach ($allAuthors as $author){
             echo "
                   <div class='card'>
-                    <img src2='../../assets/{$author->image()}' alt='Imagem do Author'>
+                    <img src='../../assets/{$author->image()}' alt='Imagem do Author'>
                     <h4>{$author->name()}</h4>
                     <h5>{$author->description()}</h5>
                     <a href='#'><span>Saiba mais</span></a>
@@ -33,7 +33,7 @@
 ?>
 <body>
     <header>
-        <div class="isLogged Admin"> <!-- Tags content: isLogged or isAdmin or isUser -->
+        <div class="isUser"> <!-- Tags content: isLogged or isAdmin or isUser -->
             <div class="content">
                 <section class="left">
                     <a href="../../index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
