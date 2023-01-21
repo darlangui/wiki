@@ -12,6 +12,20 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../../assets/logo_wk.svg">
 </head>
+<?php
+    use  \pdo\Infrastructure\Repository\PdoUserRepository;
+    use \pdo\Infrastructure\Persistence\CreateConnection;
+    include_once('vendor/autoload.php');
+    session_start();
+    if(isset($_SESSION['id'])){
+        $author = new PdoUserRepository(CreateConnection::createConnection());
+        $author = $author->verifyUser($_SESSION['id']);
+        $style = 'isLogged';
+    }else{
+        $style = 'isUser';
+        session_destroy();
+    }
+?>
 <body>
     <header>
         <div class="isLogged Admin"> <!-- Tags content: isLogged or isAdmin or isUser -->

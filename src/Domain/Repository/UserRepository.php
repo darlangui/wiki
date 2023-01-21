@@ -11,4 +11,5 @@ interface UserRepository
     public function save(User $user) : bool;
     public function alter(User $user) : bool;
     public function login(string $email, string $password) : bool;
+    public function verifyUser(int $id) : User;
 }

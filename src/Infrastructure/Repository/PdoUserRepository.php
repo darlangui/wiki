@@ -54,6 +54,20 @@ class PdoUserRepository implements UserRepository
         return false;
     }
 
+    public function verifyUser(int $id) : User
+    {
+        $sqlQuery = 'SELECT user.id, user.name, user.email, user.password, author.description, user.image FROM user LEFT JOIN author ON author.user_id = user.id LEFT JOIN proofeader ON proofeader.user_id = user.id';
+        $stmt = $this->connection->query($sqlQuery);
+
+        $userDataList = $stmt->fetchAll();
+
+        foreach ($userDataList as $userData){
+            if($userData['id'] == $id){
+                return new User($userData['id'],$userData['name'],$userData['email'],$userData['password'],$userData['description'],$userData['image'],);
+            }
+        }
+    }
+
 
     private function hydrateUserList(\PDOStatement $stmt) : array{
         $userDataList = $stmt->fetchAll();
