@@ -11,21 +11,36 @@
     <link rel="stylesheet" href="../../fonts/Fonts/WEB/css/satoshi.css">
     <link rel="icon" href="../../assets/logo_wk.svg">
 </head>
+<?php
+    function testError() : string
+    {
+        session_start();
+        $style = '';
+        if(isset($_SESSION['error'])){
+            $style = $_SESSION['error'];
+            unset($_SESSION['error']);
+            return $style;
+        }
+        return $style;
+    }
+
+    $test = testError();
+?>
 <body>
     <main>
         <section class="ilust_content"><div class="square"></div><div class="blur"></div><div class="blur_two"></div></section>
         <section class="content_main">
             <a href="../../"><img class="logo" src="../../assets/logo_wiki.svg" alt="Logo da WIKING"></a>
             <div class="form">
-                <form action="#" method="post">
+                <form action="../../src/Execution/verifyLogin.php" method="post">
                     <h2>BEM VINDO NOVAMENTE!</h2>
                     <div class="input-container">
                         <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" placeholder="email@email.com">
+                        <input type="email" name="email" id="email" style="<?php echo $test; ?>" placeholder="email@email.com">
                     </div>
                     <div class="input-container">
                         <label for="password">Senha</label>
-                        <input type="password" name="password" id="password" placeholder="password">
+                        <input  type="password" name="password" style="<?php echo $test; ?>" id="password" placeholder="password">
                     </div>
                     <div class="button">
                         <button class="button_black" type="submit">Entrar</button>

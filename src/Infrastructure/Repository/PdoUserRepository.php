@@ -37,6 +37,24 @@ class PdoUserRepository implements UserRepository
 
     }
 
+    public function login(string $email, string $password) : bool
+    {
+        $sqlQuery = 'SELECT * FROM user';
+        $stmt = $this->connection->query($sqlQuery);
+
+        $userDataList = $stmt->fetchAll();
+
+        foreach ($userDataList as $userData){
+            if($userData['email'] == $email && $userData['password'] == $password){
+                session_start();
+                $_SESSION['id'] = $userData['id'];
+                return true;
+            }
+        }
+        return false;
+    }
+
+
     private function hydrateUserList(\PDOStatement $stmt) : array{
         $userDataList = $stmt->fetchAll();
         $userList = [];

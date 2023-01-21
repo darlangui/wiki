@@ -10,4 +10,5 @@ interface UserRepository
     public function fillSpecialization() : array;
     public function save(User $user) : bool;
     public function alter(User $user) : bool;
+    public function login(string $email, string $password) : bool;
 }
