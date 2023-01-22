@@ -92,5 +92,9 @@ class User
         $this->$specialization[] = $specialization;
     }
 
-
+    /** @return Post[] */
+    public function posts(): array
+    {
+        return $this->posts;
+    }
 }

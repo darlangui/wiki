@@ -13,8 +13,9 @@
     <link rel="icon" href="../../assets/logo_wk.svg">
 </head>
 <?php
-    use  \pdo\Infrastructure\Repository\PdoUserRepository;
+    use \pdo\Infrastructure\Repository\PdoUserRepository;
     use \pdo\Infrastructure\Persistence\CreateConnection;
+    use pdo\Infrastructure\Repository\PdoPostRepository;
     include_once('../../vendor/autoload.php');
     session_start();
     if(isset($_SESSION['id'])){
@@ -24,6 +25,32 @@
     }else{
         $style = 'isUser';
         session_destroy();
+    }
+
+    function allPosts() : void
+    {
+        $postRepository = new PdoPostRepository(CreateConnection::createConnection());
+        $allPosts = $postRepository->allPostsAndAuthors();
+        foreach ($allPosts as $post){
+            $postOne = $post->posts();
+            foreach ($postOne as $row){
+                $date = $row->date();
+                echo "
+                    <div class='card'>
+                        <div class='image_post'><img src='../../assets/{$row->image()}' alt='img post'></div>
+                        <div class='resource'>
+                            <h4>{$row->category()}</h4>
+                            <h3>{$row->title()}</h3>
+                            <span>{$row->information()}</span>
+                            <div class='h5'>
+                                <h5>{$date->format('d-m-Y')}</h5>   
+                                <h5>{$post->name()}</h5>                     
+                            </div>
+                        </div>
+                    </div>
+            ";
+            }
+        }
     }
 ?>
 <body>
@@ -74,17 +101,14 @@
                 </div>
             </div>
             <div class="right">
-                <span> Ultimos Posts </span>
+                <span> Tudo somente aqui </span>
                 <div class="card">
-                    <img src="" alt="" srcset="">
                     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum lectus, ltrices</h3>
                 </div>
                 <div class="card">
-                    <img src="" alt="" srcset="">
                     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum lectus, ltrices</h3>
                 </div>
                 <div class="card">
-                    <img src="" alt="" srcset="">
                     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum lectus, ltrices</h3>
                 </div>
             </div>
@@ -92,14 +116,7 @@
         <section class="main_content">
             <h3>Todas as Publicações</h3>
             <section class="content_card">
-                <div class="card">
-                    <div class="image_post"><img src="../../assets/image_woman.svg" alt=""></div>
-                    <div class="resource">
-                            <h4>Resource</h4>
-                            <h3>Improving Your Site's SED</h3>
-                        <span>Build a unique experience  by missing</span>
-                    </div>
-                </div>
+                <?php allPosts(); ?>
             </section>
         </section>
     </main>

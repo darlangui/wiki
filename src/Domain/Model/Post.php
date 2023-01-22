@@ -10,8 +10,9 @@ class Post
     private \DateTimeImmutable $date;
     private string $status;
     private string $image;
+    private string $category;
 
-    public function __construct(int $id, string $title, string $information, \DateTimeImmutable $date, string $status, string $image)
+    public function __construct(int $id, string $title, string $information, \DateTimeImmutable $date, string $status, string $image, string $category)
     {
         $this->id = $id;
         $this->title = $title;
@@ -19,6 +20,7 @@ class Post
         $this->date = $date;
         $this->status = $status;
         $this->image = $image;
+        $this->category = $category;
     }
 
     // Getters
@@ -32,12 +34,27 @@ class Post
         return $this->title;
     }
 
+    public function category(): string
+    {
+        return $this->category;
+    }
+
     public function information(): string
     {
         return $this->information;
     }
 
-    public function date(\DateTimeImmutable $date): void
+    public function date() : \DateTimeImmutable
+    {
+        return $this->date;
+    }
+
+    public function changeCategory(string $category) : void
+    {
+        $this->category = $category;
+    }
+
+    public function changeDate(\DateTimeImmutable $date): void
     {
         $this->date = $date;
     }

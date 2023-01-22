@@ -6,5 +6,5 @@ use pdo\Domain\Model\Post;
 
 interface PostRepository
 {
-    public function allPosts() : array;
+    public function allPostsAndAuthors() : array;
 }
