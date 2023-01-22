@@ -3,7 +3,7 @@
 namespace pdo\Domain\Model;
 class User
 {
-    private readonly int $id;
+    private ?int $id;
     private string $name;
     private string $email;
     private string $password;
@@ -14,7 +14,7 @@ class User
     /** @var Specialization[] */
     private array $specialization;
 
-    public function __construct(int $id, string $name, string $email, string $password, string $description, string $image)
+    public function __construct(?int $id, string $name, string $email, string $password, string $description, string $image)
     {
         $this->id = $id;
         $this->email = $email;
@@ -24,8 +24,13 @@ class User
         $this->description = $description;
     }
 
+    public function definyId(int $id) : void
+    {
+        $this->id = $id;
+    }
+
     // Getters
-    public function id() : int
+    public function id() : ?int
     {
         return $this->id;
     }

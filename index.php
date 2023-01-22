@@ -25,7 +25,7 @@
 ?>
 <body>
     <header>
-        <div class="<?php echo $style; ?>"> <!-- Tags content: isLogged or isAdmin or isUser -->
+        <div class="<?php echo $style; ?>"> <!-- Tags content: isLogged, isLogged Admin or isUser -->
             <div class="content">
                 <section class="left">
                     <a href="index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>

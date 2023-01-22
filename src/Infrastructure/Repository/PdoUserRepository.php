@@ -20,6 +20,14 @@ class PdoUserRepository implements UserRepository
         $stmt = $this->connection->query($sqlQuery);
         return $this->hydrateUserList($stmt);
     }
+
+    public function allUser() : array
+    {
+        $sqlQuey = 'SELECT * FROM user';
+        $stmt = $this->connection->query($sqlQuey);
+        return $this->hydrateUserListTotal($stmt);
+    }
+
     public function fillPost() : array
     {
 
@@ -29,6 +37,50 @@ class PdoUserRepository implements UserRepository
 
     }
     public function save(User $user) : bool
+    {
+        if($user->id() === null){
+            return $this->insert($user);
+        }else{
+            return $this->update($user);
+        }
+    }
+
+    private function insert(User $user) : bool
+    {
+        $userList = $this->allUser();
+
+        foreach ($userList as $userDate){
+            if($userDate->email() === $user->email()){
+                return false;
+            }
+        }
+
+        $insertQuery = 'INSERT INTO user (name, email, password, image) VALUES (:name, :email, :password, :image)';
+        $stmt = $this->connection->prepare($insertQuery);
+
+        $sucess = $stmt->execute([
+            ':name' => $user->name(),
+            ':email' => $user->email(),
+            ':password' => $user->password(),
+            ':image' => $user->image(),
+        ]);
+
+        if($sucess) {
+            $id = $this->connection->lastInsertId();
+            $user->definyId($id);
+            $insertQuery = 'INSERT INTO author (description, user_id) VALUES (:description, :id)';
+            $stmt = $this->connection->prepare($insertQuery);
+
+            $Onsucess = $stmt->execute([
+                ':description' => $user->description(),
+                ':id' => $id,
+            ]);
+        }
+
+        return $sucess;
+    }
+
+    private function update(User $user) : bool
     {
 
     }
@@ -75,6 +127,17 @@ class PdoUserRepository implements UserRepository
 
         foreach ($userDataList as $userData){
             $userList[] = new User($userData['id'], $userData['name'], $userData['email'], '', $userData['description'], $userData['image']);
+        }
+
+        return $userList;
+    }
+
+    private function hydrateUserListTotal(\PDOStatement $stmt) : array{
+        $userDataList = $stmt->fetchAll();
+        $userList = [];
+
+        foreach ($userDataList as $userData){
+            $userList[] = new User($userData['id'], $userData['name'], $userData['email'], $userData['password'],'', $userData['image']);
         }
 
         return $userList;

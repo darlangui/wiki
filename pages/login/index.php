@@ -12,9 +12,9 @@
     <link rel="icon" href="../../assets/logo_wk.svg">
 </head>
 <?php
+    session_start();
     function testError() : string
     {
-        session_start();
         $style = '';
         if(isset($_SESSION['error'])){
             $style = $_SESSION['error'];
@@ -24,7 +24,18 @@
         return $style;
     }
 
+    function testEmail() : string
+    {
+        if (isset($_SESSION['email'])) {
+            return $_SESSION['email'];
+            unset($_SESSION['email']);
+        }
+        return '';
+    }
+
     $test = testError();
+    $testEmail = testEmail();
+    session_destroy();
 ?>
 <body>
     <main>
@@ -36,7 +47,7 @@
                     <h2>BEM VINDO NOVAMENTE!</h2>
                     <div class="input-container">
                         <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" style="<?php echo $test; ?>" placeholder="email@email.com">
+                        <input type="email" name="email" id="email" style="<?php echo $test; ?>" value="<?php echo $testEmail; ?>" placeholder="email@email.com">
                     </div>
                     <div class="input-container">
                         <label for="password">Senha</label>

@@ -12,9 +12,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../../assets/logo_wk.svg">
 </head>
+<?php
+    use  \pdo\Infrastructure\Repository\PdoUserRepository;
+    use \pdo\Infrastructure\Persistence\CreateConnection;
+    include_once('../../vendor/autoload.php');
+    session_start();
+    if(isset($_SESSION['id'])){
+        $author = new PdoUserRepository(CreateConnection::createConnection());
+        $author = $author->verifyUser($_SESSION['id']);
+        $style = 'isLogged';
+    }else{
+        $style = 'isUser';
+        session_destroy();
+    }
+?>
 <body>
     <header>
-        <div class="isLogged Admin"> <!-- Tags content: isLogged or isAdmin or isUser -->
+        <div class="<?php echo $style; ?>"> <!-- Tags content: isLogged or isAdmin or isUser -->
             <div class="content">
                 <section class="left">
                     <a href="../../index.php"><img src="assets/logo_wiki.svg" alt="Logo da WIKING"></a>
@@ -33,12 +47,12 @@
                 </section>
                 <section class="right_profile">
                     <section class="profile">
-                        <span id="profile">D</span>
+                        <span id="profile"><?php if(isset($_SESSION['id'])){ echo substr($author->name(), 0, 1);} ?></span>
                         <div id="dropdown" class="dropdown">
                             <a href="#">Meu Perfil</a>
                             <a href="../post">Postar</a>
                             <a href="../profreader" class="profreader">Analisar</a>
-                            <a href="#" class="logout">Sair</a>
+                            <a href="../../src/Execution/Logout.php" class="logout">Sair</a>
                         </div>
                     </section>
                 </section>
