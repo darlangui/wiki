@@ -19,11 +19,45 @@
     session_start();
     if(isset($_SESSION['id'])){
         $author = new PdoUserRepository(CreateConnection::createConnection());
+        $author1 = $author;
+        $style = $author->verifyTypeUser($_SESSION['id']);
         $author = $author->verifyUser($_SESSION['id']);
-        $style = 'isLogged';
     }else{
         $style = 'isUser';
         session_destroy();
+    }
+
+    function Specialization(PdoUserRepository $author){
+        $specialization = $author->fillSpecialization($_SESSION['id']);
+        foreach ($specialization as $item) {
+            $date = $item->date();
+            echo "
+                    <div class='card'>
+                    <form class='card_form' action='../../src/Execution/deleteSpecialization.php' method='post'>
+                        <input type='hidden' value='{$item->id()}' name='id'>
+                        <label for='name_formation'>
+                            <input type='text' id='name_formation' name='name_formation' class='name_formation' value='{$item->name()}' required>
+                        </label>
+                        <label for='cod'>
+                            <span>Código</span>
+                            <input type='text' id='cod' class='cod' value='{$item->code()}' required>
+                        </label>
+                        <label for='date'>
+                            <span>Data</span>
+                            <input type='date' id='date' class='date' value='{$date->format("Y-m-d")}' required>
+                        </label>
+                        <label id='label_desc' for='descript'>
+                            <span>Descrição</span>
+                            <textarea type='text' id='descript' class='descript' placeholder='Digite a descrição de sua formação'>{$item->description()}</textarea>
+                        </label>
+                        <div class='option'>
+                            <a href='../../src/Execution/deleteSpecialization.php?id={$item->id()}'>Excluir</a>
+                            <button type='submit'>Alterar</button>
+                        </div>
+                    </form>
+                </div>
+            ";
+        }
     }
 ?>
 <body>
@@ -61,22 +95,22 @@
     </header>
     <main>
         <section class="content_profile">
-            <img src="../../assets/image_woman.svg" alt="Imagem do usuário">
-            <span><span class="purplu">Olá,</span> Sofia Ester</span>
+            <img src="../../assets/<?php echo $author->image(); ?>" alt="Imagem do usuário">
+            <span><span class="purplu">Olá,</span> <?php echo $author->name(); ?></span>
         </section>
         <section class="info_basic">
             <h1>Informações básicas</h1>
             <span>Algumas informações básicas sobre a sua conta.</span>
-            <form method="post" class="form_name">
+            <form method="post" action="../../src/Execution/upInfo.php" enctype='multipart/form-data' class="form_name">
                 <label for="name" class="name">
                     <span> Nome </span>
-                    <input type="text" id="name" class="input-name" value="Sofia Ester" required>
+                    <input type="text" id="name" class="input-name" name="name" value="<?php echo $author->name(); ?>" required>
                 </label>
                 <div class="alter_image">
                     <label for="image" class="image">
                         <span> Foto de Perfil </span>
-                        <img src="../../assets/image_woman.svg" alt="Foto de pefil">
-                        <input type="file" id="image">
+                        <img src="../../assets/<?php echo $author->image(); ?>" alt="Foto de pefil">
+                        <input type="file" id="image" name="image">
                     </label>
                     <button type="submit">Alterar</button>
                 </div>
@@ -85,15 +119,15 @@
         <section class="info_basic">
             <h1>Informações de contato</h1>
             <span>Algumas informações de contato sobre a sua conta.</span>
-            <form method="post" class="form_name">
+            <form method="post" class="form_name" action="../../src/Execution/upContactInfo.php">
                 <label for="email" class="name">
                     <span> E-mail </span>
-                    <input type="text" id="email" class="input-name" value="sofiaester@gmail.com" required>
+                    <input type="text" id="email" name="email" class="input-name" value="<?php echo $author->email(); ?>" required>
                 </label>
                 <div class="alter_image">
                     <label for="desc" class="image">
                         <span> Descrição </span>
-                        <input type="text" name="desc" id="desc" placeholder="Descrição de sua conta">
+                        <input type="text" name="description" id="desc"  value="<?php echo $author->description(); ?>" placeholder="Descrição de sua conta">
                     </label>
                     <button type="submit">Alterar</button>
                 </div>
@@ -105,33 +139,7 @@
                 <a class="openModal" id="openModal"><button>Adicionar +</button></a>
             </section>
             <section class="cards_formations">
-                <div class="card">
-                    <form class="card_form">
-                        <label for="name_formation">
-                            <input type="text" id="name_formation" name="name_formation" class="name_formation" value="Jornalismo" required>
-                        </label>
-                        <label for="type">
-                            <span>Tipo</span>
-                            <input type="text" id="type" class="type" value="Graduação" required>
-                        </label>
-                        <label for="cod">
-                            <span>Código</span>
-                            <input type="text" id="cod" class="cod" value="3643786" required>
-                        </label>
-                        <label for="date">
-                            <span>Data</span>
-                            <input type="date" id="date" class="date" value="2003-06-01" required>
-                        </label>
-                        <label id="label_desc" for="descript">
-                            <span>Descrição</span>
-                            <input type="text" id="descript" class="descript" value="Curso de graduação para jornalistas na UFSM" placeholder="Digite a descrição de sua formação">
-                        </label>
-                        <div class="option">
-                            <a href="#">Excluir</a>
-                            <button type="submit">Alterar</button>
-                        </div>
-                    </form>
-                </div>
+                <?php Specialization($author1); ?>
             </section>
         </section>
 
@@ -140,7 +148,7 @@
                 <section class="exit">
                     <span>Adicionar Formação/Especialização</span><img src="../../assets/exit.svg" alt="Sair" id="exit"></section>
                 <section class="main">
-                    <form class="main">
+                    <form class="main" method="post" action="">
                         <label>
                             <span>Nome:</span>
                             <input type="text" name="nome" placeholder="Digite o nome da Especialização/Formação" required>
@@ -151,15 +159,15 @@
                         </label>
                         <label>
                             <span>Código:</span>
-                            <input type="text" name="tipo" onkeypress="return onlyNumbers()" placeholder="Digite o código da Especialização/Formação">
+                            <input type="text" name="cod" onkeypress="return onlyNumbers()" placeholder="Digite o código da Especialização/Formação">
                         </label>
                         <label>
                             <span>Data:</span>
-                            <input type="date" name="tipo" placeholder="Digite a data de conclusão" required>
+                            <input type="date" name="dat" placeholder="Digite a data de conclusão" required>
                         </label>
                         <label>
                             <span>Descrição:</span>
-                            <input type="text" name="tipo" placeholder="Comente um pouco sobre a descrição de sua Especialização/Formação">
+                            <input type="text" name="desc" placeholder="Comente um pouco sobre a descrição de sua Especialização/Formação">
                         </label>
                         <div class="option_main">
                             <button type="submit">Adicionar</button>

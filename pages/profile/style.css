@@ -185,11 +185,13 @@ main .formations .add_forma button:hover{
 main .formations .cards_formations {
     margin-top: 50px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 main .formations .cards_formations .card {
     width: 320px;
-    height: 300px;
     margin: 20px;
     border-color: var(--primary-gray);
     border-radius: 25px;
@@ -199,6 +201,16 @@ main .formations .cards_formations .card {
     font-family: 'Satoshi-Bold', sans-serif;
     font-weight: 600;
     padding: 20px;
+}
+
+main .formations .cards_formations .card .card_form textarea{
+    width: 300px;
+    height: 100px;
+    border: none;
+    background-color: var(--primary-white);
+    resize: none;
+    row-gap: 10px;
+
 }
 
 main .formations .cards_formations .card .card_form{

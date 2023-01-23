@@ -20,8 +20,8 @@
     session_start();
     if(isset($_SESSION['id'])){
         $author = new PdoUserRepository(CreateConnection::createConnection());
+        $style = $author->verifyTypeUser($_SESSION['id']);
         $author = $author->verifyUser($_SESSION['id']);
-        $style = 'isLogged';
     }else{
         $style = 'isUser';
         session_destroy();

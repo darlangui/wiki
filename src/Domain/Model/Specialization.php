@@ -5,24 +5,24 @@ namespace pdo\Domain\Model;
 class Specialization
 {
     private readonly int $id;
-    private int $analizy;
+    private string $name;
     private \DateTimeImmutable $date;
     private string $code;
     private string $description;
 
-    public function __construct(int $id, int $analizy, \DateTimeImmutable $date, string $code, string $description)
+    public function __construct(int $id, string $name, \DateTimeImmutable $date, string $code, string $description)
     {
         $this->id = $id;
         $this->date = $date;
         $this->code = $code;
-        $this->analizy = $analizy;
+        $this->name = $name;
         $this->description = $description;
     }
 
     // Getters
-    public function analizy(): int
+    public function name(): string
     {
-        return $this->analizy;
+        return $this->name;
     }
 
     public function id() : int
@@ -47,9 +47,9 @@ class Specialization
 
     // Setters
 
-    public function changeAnalizy() : void
+    public function changeName(string $name) : void
     {
-        $this->analizy =+ 1;
+        $this->name = $name;
     }
 
     public function changeDescription(string $description) : void
