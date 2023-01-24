@@ -86,6 +86,19 @@ class PdoUserRepository implements UserRepository
         return false;
     }
 
+    public function upSpecialization(Specialization $spec) : bool
+    {
+        $sqlQuery = "UPDATE specialization SET name = :name, date = :date, code = :code, description = :description WHERE specialization.id = :id";
+        $stmt = $this->connection->prepare($sqlQuery);
+        $stmt->bindValue(':name', $spec->name());
+        $stmt->bindValue(':date', $spec->date()->format('Y-m-d'));
+        $stmt->bindValue(':code', $spec->code());
+        $stmt->bindValue(':description', $spec->description());
+        $stmt->bindValue(':id', $spec->id());
+
+        return $stmt->execute();
+    }
+
     private function insert(User $user) : bool
     {
         $userList = $this->allUser();

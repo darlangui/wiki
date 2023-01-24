@@ -33,22 +33,22 @@
             $date = $item->date();
             echo "
                     <div class='card'>
-                    <form class='card_form' action='../../src/Execution/deleteSpecialization.php' method='post'>
+                    <form class='card_form' action='../../src/Execution/upSpecialization.php' method='post'>
                         <input type='hidden' value='{$item->id()}' name='id'>
                         <label for='name_formation'>
                             <input type='text' id='name_formation' name='name_formation' class='name_formation' value='{$item->name()}' required>
                         </label>
                         <label for='cod'>
                             <span>Código</span>
-                            <input type='text' id='cod' class='cod' value='{$item->code()}' required>
+                            <input type='text' name='code' id='cod' class='cod' value='{$item->code()}' required>
                         </label>
                         <label for='date'>
                             <span>Data</span>
-                            <input type='date' id='date' class='date' value='{$date->format("Y-m-d")}' required>
+                            <input type='date' id='date' name='date' class='date' value='{$date->format("Y-m-d")}' required>
                         </label>
                         <label id='label_desc' for='descript'>
                             <span>Descrição</span>
-                            <textarea type='text' id='descript' class='descript' placeholder='Digite a descrição de sua formação'>{$item->description()}</textarea>
+                            <textarea type='text' id='descript' name='descript' class='descript' placeholder='Digite a descrição de sua formação'>{$item->description()}</textarea>
                         </label>
                         <div class='option'>
                             <a href='../../src/Execution/deleteSpecialization.php?id={$item->id()}'>Excluir</a>
@@ -148,14 +148,10 @@
                 <section class="exit">
                     <span>Adicionar Formação/Especialização</span><img src="../../assets/exit.svg" alt="Sair" id="exit"></section>
                 <section class="main">
-                    <form class="main" method="post" action="">
+                    <form class="main" method="post" action="../../src/Execution/insertSpecialization.php">
                         <label>
                             <span>Nome:</span>
-                            <input type="text" name="nome" placeholder="Digite o nome da Especialização/Formação" required>
-                        </label>
-                        <label>
-                            <span>Tipo:</span>
-                            <input type="text" name="tipo" placeholder="Digite o tipo de Especialização/Formação" required>
+                            <input type="text" name="name" placeholder="Digite o nome da Especialização/Formação" required>
                         </label>
                         <label>
                             <span>Código:</span>
