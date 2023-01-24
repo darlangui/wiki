@@ -11,7 +11,7 @@
     try{
         $repository = new PdoPostRepository(CreateConnection::createConnection());
         $repository->deletePost(new Post($id,'','',new \DateTimeImmutable(),'','',''), $iduse);
-        header('Location: ../../pages/profile');
+        header('Location: ../../pages/post');
     }catch (PDOException $ex){
         echo $ex->getMessage();
     }

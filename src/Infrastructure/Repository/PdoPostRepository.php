@@ -26,6 +26,28 @@ class PdoPostRepository implements PostRepository
         return $this->hydratePostList($stmt);
     }
 
+    public function alterPost(Post $post) : bool
+    {
+        $sqlQuery = "UPDATE post SET title = :title, information = :information, date = :date, image = :image WHERE post.id = '{$post->id()}'";
+        $stmt = $this->connection->prepare($sqlQuery);
+        $stmt->bindValue(':title', $post->title());
+        $stmt->bindValue(':information', $post->information());
+        $stmt->bindValue(':date', $post->date()->format('Y-m-d'));
+        $stmt->bindValue(':image', $post->image());
+
+        if($stmt->execute()){
+            $sqlQuery = "SELECT category_id FROM post_has_category WHERE post_has_category.post_id = '{$post->id()}'";
+            $stmt = $this->connection->query($sqlQuery);
+            $list = $stmt->fetchAll();
+            var_dump($list);
+            foreach ($list as $item) {
+                $sqlQuery = "UPDATE category SET name = :name WHERE id = '{$item['category_id']}'";
+                $stmt = $this->connection->prepare($sqlQuery);
+                $stmt->bindValue(':name', $post->category());
+            }
+        }
+        return $stmt->execute();
+    }
     public function deletePost(Post $post, int $id) : bool
     {
         $sqlQuery = "DELETE FROM post_has_category WHERE post_id = '{$post->id()}' AND post_author_user_id = '{$id}'";

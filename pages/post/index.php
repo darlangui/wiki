@@ -33,9 +33,9 @@
 
         foreach ($repository->fillPost($_SESSION['id']) as $item){
             echo "
-                <form class='card' action='../../src/Execution/upPost.php'>
+                <form class='card' action='../../src/Execution/upPost.php' method='post' enctype='multipart/form-data'>
                     <label>
-                        <input type='hidden' name='id' value='{$item->id()}'>
+                        <input type='hidden' name='id_code' value='{$item->id()}'>
                     </label>
                     <label class='image_post'>
                         <input type='file' name='image_alter' id='image_alter'><img src='../../assets/{$item->image()}' alt=''>
@@ -48,7 +48,7 @@
                             <input type='text' name='title' id='title'  class='title_input' value='{$item->title()}'>
                         </label>
                         <label>
-                            <textarea class='desc_input'> {$item->information() }</textarea>
+                            <textarea name='desc_input' class='desc_input'> {$item->information() }</textarea>
                         </label>
                         <div class='dateStatus'>
                              <label>
