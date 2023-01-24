@@ -4,13 +4,13 @@ namespace pdo\Domain\Model;
 
 class Specialization
 {
-    private readonly int $id;
+    private ?int $id;
     private string $name;
     private \DateTimeImmutable $date;
     private string $code;
     private string $description;
 
-    public function __construct(int $id, string $name, \DateTimeImmutable $date, string $code, string $description)
+    public function __construct(?int $id, string $name, \DateTimeImmutable $date, string $code, string $description)
     {
         $this->id = $id;
         $this->date = $date;
@@ -25,7 +25,7 @@ class Specialization
         return $this->name;
     }
 
-    public function id() : int
+    public function id() : ?int
     {
         return $this->id;
     }

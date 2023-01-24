@@ -99,6 +99,31 @@ class PdoUserRepository implements UserRepository
         return $stmt->execute();
     }
 
+    public function insertSpecialization(Specialization $spec, int $id) : bool
+    {
+        $insertQuery = 'INSERT INTO specialization (name, date, code, description) VALUES (:name, :date, :code, :description)';
+        $stmt = $this->connection->prepare($insertQuery);
+
+        $sucess = $stmt->execute([
+            ':name' => $spec->name(),
+            ':date' => $spec->date()->format('Y-m-d'),
+            ':code' => $spec->code(),
+            ':description' => $spec->description()
+        ]);
+
+        if($sucess){
+            $insertQuery = "INSERT INTO specialization_has_author (specialization_id, author_user_id) VALUES (:specialization, :user)";
+            $stmt = $this->connection->prepare($insertQuery);
+
+            $sucess = $stmt->execute([
+                ':specialization' => $this->connection->lastInsertId(),
+                ':user' => $id
+            ]);
+        }
+
+        return $sucess;
+    }
+
     private function insert(User $user) : bool
     {
         $userList = $this->allUser();

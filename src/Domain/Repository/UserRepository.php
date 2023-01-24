@@ -15,4 +15,5 @@ interface UserRepository
     public function verifyTypeUser(int $id) : string;
     public function deleteSpecilizationForUser(int $id_user, int $id_specialization) : bool;
     public function upSpecialization(Specialization $spec) : bool;
+    public function insertSpecialization(Specialization $spec, int $id) : bool;
 }
