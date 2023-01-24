@@ -30,9 +30,20 @@ class PdoUserRepository implements UserRepository
         return $this->hydrateUserListTotal($stmt);
     }
 
-    public function fillPost(): array
+    public function fillPost(int $id): array
     {
+        $sqlQuery = "SELECT post.id, category.name, post.title, post.information, post.date, post.status, post.image FROM post
+        INNER JOIN post_has_category ON post_has_category.post_id = post.id
+        INNER JOIN category ON post_has_category.category_id = category.id WHERE post_has_category.post_author_user_id = '{$id}'";
+        $stmt = $this->connection->query($sqlQuery);
+        $list = $stmt->fetchAll();
+        $listPosts = [];
 
+        foreach ($list as $item) {
+            $listPosts[] = new Post($item['id'],$item['title'],$item['information'], new \DateTimeImmutable($item['date']),$item['status'],$item['image'],$item['name']);
+        }
+
+        return $listPosts;
     }
 
     public function deleteSpecilizationForUser(int $id_user, int $id_specialization): bool

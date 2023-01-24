@@ -7,7 +7,7 @@ use pdo\Domain\Model\User;
 interface UserRepository
 {
     public function allUsersAreAuthors() : array;
-    public function fillPost() : array;
+    public function fillPost(int $id) : array;
     public function fillSpecialization(int $id) : array;
     public function save(User $user) : bool;
     public function login(string $email, string $password) : bool;

@@ -15,6 +15,8 @@
 <?php
     use  \pdo\Infrastructure\Repository\PdoUserRepository;
     use \pdo\Infrastructure\Persistence\CreateConnection;
+    use pdo\Infrastructure\Repository\PdoPostRepository;
+    use pdo\Domain\Model\Post;
     include_once('../../vendor/autoload.php');
     session_start();
     if(isset($_SESSION['id'])){
@@ -24,6 +26,47 @@
     }else{
         $style = 'isUser';
         session_destroy();
+    }
+
+    function allposts(){
+        $repository = new PdoUserRepository(CreateConnection::createConnection());
+
+        foreach ($repository->fillPost($_SESSION['id']) as $item){
+            echo "
+                <form class='card' action='../../src/Execution/upPost.php'>
+                    <label>
+                        <input type='hidden' name='id' value='{$item->id()}'>
+                    </label>
+                    <label class='image_post'>
+                        <input type='file' name='image_alter' id='image_alter'><img src='../../assets/{$item->image()}' alt=''>
+                    </label>
+                    <div class='resource'>
+                        <label>
+                            <input type='text' name='categoria' id='categoria' class='cat_inpu' value='{$item->category()}'>
+                        </label>
+                        <label>
+                            <input type='text' name='title' id='title'  class='title_input' value='{$item->title()}'>
+                        </label>
+                        <label>
+                            <textarea class='desc_input'> {$item->information() }</textarea>
+                        </label>
+                        <div class='dateStatus'>
+                             <label>
+                                <span>{$item->date()->format('Y-m-d')}</span>
+                            </label>
+                            <label>
+                                <span>{$item->status()}</span>
+                            </label>
+                        </div>
+                        <div class='option'>
+                            <a href='../../src/Execution/deletePost.php?id={$item->id()}'>Excluir</a>
+                            <button type='submit'>Alterar</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            ";
+        }
     }
 ?>
 <body>
@@ -88,30 +131,7 @@
         </section>
         <section class="publi">
             <span>Suas Publicações</span>
-            <form class="card">
-                <label>
-                    <input type="hidden" name="id" value="id">
-                </label>
-                <label class="image_post">
-                    <input type="file" name="image_alter" id="image_alter"><img src="../../assets/image_woman.svg" alt="">
-                </label>
-                <div class="resource">
-                    <label>
-                        <input type="text" name="categoria" id="categoria" class="cat_inpu" value="Resource">
-                    </label>
-                    <label>
-                        <input type="text" name="title" id="title"  class="title_input" value="Improving Your Site's SED">
-                    </label>
-                    <label>
-                        <textarea class="desc_input"> Build a unique experience  by missing and matching components.</textarea>
-                    </label>
-                    <div class="option">
-                        <a href="#">Excluir</a>
-                        <button type="submit">Alterar</button>
-                    </div>
-                </div>
-            </form>
-
+            <?php allposts(); ?>
         </section>
     </main>
     <footer>

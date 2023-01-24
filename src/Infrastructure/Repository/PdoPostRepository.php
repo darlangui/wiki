@@ -26,6 +26,22 @@ class PdoPostRepository implements PostRepository
         return $this->hydratePostList($stmt);
     }
 
+    public function deletePost(Post $post, int $id) : bool
+    {
+        $sqlQuery = "DELETE FROM post_has_category WHERE post_id = '{$post->id()}' AND post_author_user_id = '{$id}'";
+        $stmt = $this->connection->prepare($sqlQuery);
+        if($stmt->execute()){
+            $sqlQuery = "DELETE FROM comments WHERE post_id = '{$post->id()}'";
+            $stmt = $this->connection->prepare($sqlQuery);
+            if($stmt->execute()){
+                $sqlQuery = "DELETE FROM post WHERE post.id = '{$post->id()}'";
+                $stmt = $this->connection->prepare($sqlQuery);
+                $stmt->execute();
+            }
+        }
+        return $stmt->execute();
+    }
+
     private function hydratePostList(\PDOStatement $stmt) : array
     {
         $postDataList = $stmt->fetchAll();

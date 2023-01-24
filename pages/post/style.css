@@ -171,6 +171,10 @@ main .publi .card .resource .title_input{
 }
 
 main .publi .card .resource .desc_input{
+
+}
+
+main .publi .card .resource textarea{
     color: var(--primary-gray);
     font-size: 1.3rem;
     word-break: break-word;
@@ -178,6 +182,18 @@ main .publi .card .resource .desc_input{
     background-color: var(--primary-white);
     width: 100%;
     resize: none;
+    height: 100px;
+}
+
+main .publi .card .resource .dateStatus{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .publi .card .resource .dateStatus span{
+    font-size: 1.6rem;
+    margin-right: 15px;
 }
 
 main .publi .card .image_post input[type="file"]{
@@ -187,6 +203,7 @@ main .publi .card .image_post input[type="file"]{
 main .publi .card .resource .option{
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
 }
 
 main .publi .card .resource .option a{
