@@ -117,6 +117,11 @@ class PdoPostRepository implements PostRepository
             $sqlQuery = "DELETE FROM comments WHERE post_id = '{$post->id()}'";
             $stmt = $this->connection->prepare($sqlQuery);
             if($stmt->execute()){
+                $sqlQuery = "SELECT post.image FROM post WHERE post.id = '{$post->id()}'";
+                $stmt = $this->connection->query($sqlQuery);
+                foreach ($stmt->fetchAll() as $item) {
+                    unlink('../../assets/'.$item['image']);
+                }
                 $sqlQuery = "DELETE FROM post WHERE post.id = '{$post->id()}'";
                 $stmt = $this->connection->prepare($sqlQuery);
                 $stmt->execute();
