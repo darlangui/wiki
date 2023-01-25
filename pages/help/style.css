@@ -1,0 +1,58 @@
+.feedback {
+    width: 1080px;
+    height: 100%;
+    margin-top: 120px;
+}
+
+.feedback .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback input{
+    width: 600px;
+    height: 44px;
+    font-size: 1.6rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--segundary-gray);
+    text-align: center;
+    background-color: var(--primary-white);
+}
+
+.feedback button{
+    width: 120px;
+    height: 50px;
+    background-color: var(--primary-regular);
+    border-radius: 10px;
+    color: var(--primary-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Satoshi-Bold', sans-serif;
+    margin-top: 20px;
+}
+
+.feedback textarea{
+    color: var(--primary-gray);
+    font-size: 1.3rem;
+    word-break: break-word;
+    border-radius: 15px;
+    border: 1px solid var(--segundary-gray);
+    background-color: var(--primary-white);
+    width: 600px;
+    resize: none;
+    height: 300px;
+    padding: 20px;
+}
+
+.feedback label{
+    margin-top: 20px;
+}
