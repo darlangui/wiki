@@ -15,6 +15,8 @@
 <?php
     use  \pdo\Infrastructure\Repository\PdoUserRepository;
     use \pdo\Infrastructure\Persistence\CreateConnection;
+    use pdo\Infrastructure\Repository\PdoPostRepository;
+    use pdo\Domain\Model\Post;
     include_once('../../vendor/autoload.php');
     session_start();
     if(isset($_SESSION['id'])){
@@ -24,6 +26,35 @@
     }else{
         $style = 'isUser';
         session_destroy();
+        header('Location: ../404');
+    }
+
+    function allPostsForVerify(){
+        $repository = new PdoPostRepository(CreateConnection::createConnection());
+        $list = $repository->verifyPost();
+        foreach ($list as $item) {
+            echo "
+                <div class='card'>
+                    <input type='hidden' name='id' value='{$item->id()}'>
+                    <div class='image_post'><img src='../../assets/{$item->image()}' alt='Imagem do Post'></div>
+                    <div class='resource'>
+                        <h4>{$item->category()}</h4>
+                        <h3>{$item->title()}</h3>
+                        <span>{$item->information()}</span>
+                        <div class='infos'>
+                            <span>{$item->date()->format('d-m-Y')}</span>
+                            <span>{$item->status()}</span>
+                        </div>
+                    </div>
+                    <div class='option'>
+                        <div class='rej'>
+                            <a href='../../src/Execution/rejPost.php?id={$item->id()}'><button>Rejeitar</button></a>
+                        </div>       
+                            <a href='../../src/Execution/accPost.php?id={$item->id()}'><button>Aceitar</button></a>
+                    </div>
+                </div>
+            ";
+        }
     }
 ?>
 <body>
@@ -67,28 +98,7 @@
         <section class="info">
             <span>Publicações para análise</span>
             <div class="cards">
-                <div class="card">
-                    <div class="image_post"><img src="../../assets/image_woman.svg" alt=""></div>
-                    <div class="resource">
-                        <h4>Resource</h4>
-                        <h3>Improving Your Site's SED</h3>
-                        <span>Build a unique experience  by missing</span>
-                    </div>
-                    <div class="option">
-                        <form class="rej">
-                            <label>
-                                <input type="hidden" name="id" value="id">
-                            </label>
-                            <button type="submit">Rejeitar</button>
-                        </form>
-                        <form>
-                            <label>
-                                <input type="hidden" name="id" value="id">
-                            </label>
-                            <button type="submit">Aceitar</button>
-                        </form>
-                    </div>
-                </div>
+                <?php allPostsForVerify(); ?>
             </div>
         </section>
     </main>
@@ -116,5 +126,8 @@
             </div>
         </section>
     </footer>
+    <script src="../../utils/DropDownProfile.js"></script>
+    <script src="../../utils/ModelOpen.js"></script>
+    <script src="../../utils/OnlyNumbers.js"></script>
 </body>
 </html>

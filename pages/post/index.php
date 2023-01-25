@@ -26,6 +26,7 @@
     }else{
         $style = 'isUser';
         session_destroy();
+        header('Location: ../404');
     }
 
     function allposts(){
@@ -52,7 +53,7 @@
                         </label>
                         <div class='dateStatus'>
                              <label>
-                                <span>{$item->date()->format('Y-m-d')}</span>
+                                <span>{$item->date()->format('d-m-Y')}</span>
                             </label>
                             <label>
                                 <span>{$item->status()}</span>
@@ -61,8 +62,7 @@
                         <div class='option'>
                             <a href='../../src/Execution/deletePost.php?id={$item->id()}'>Excluir</a>
                             <button type='submit'>Alterar</button>
-                        </div>
-                        
+                        </div>  
                     </div>
                 </form>
             ";
@@ -108,7 +108,7 @@
             <h1>Adicione sua publicação para que todos possam ler</h1>
         </section>
         <section class="add_publi">
-            <form class="form">
+            <form class="form" action="../../src/Execution/insertPost.php" method="post" enctype="multipart/form-data">
                 <span class="title">Informe os dados necessários para a publicação</span>
                 <label>
                     <span>Categoria :</span>
@@ -116,7 +116,7 @@
                 </label>
                 <label>
                     <span>Título :</span>
-                    <input type="text" name="descri" id="descri" placeholder="Digite o título da informação" required>
+                    <input type="text" name="title" id="title" placeholder="Digite o título da informação" required>
                 </label>
                 <label class="textarea">
                     <span>Informação :</span>
@@ -131,7 +131,9 @@
         </section>
         <section class="publi">
             <span>Suas Publicações</span>
-            <?php allposts(); ?>
+            <div class="containt_card">
+                <?php allposts(); ?>
+            </div>
         </section>
     </main>
     <footer>

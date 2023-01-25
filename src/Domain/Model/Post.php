@@ -4,7 +4,7 @@ namespace pdo\Domain\Model;
 
 class Post
 {
-    private readonly int $id;
+    private readonly ?int $id;
     private string $title;
     private string $information;
     private \DateTimeImmutable $date;
@@ -12,7 +12,7 @@ class Post
     private string $image;
     private string $category;
 
-    public function __construct(int $id, string $title, string $information, \DateTimeImmutable $date, string $status, string $image, string $category)
+    public function __construct(?int $id, string $title, string $information, \DateTimeImmutable $date, string $status, string $image, string $category)
     {
         $this->id = $id;
         $this->title = $title;
@@ -24,7 +24,7 @@ class Post
     }
 
     // Getters
-    public function id(): int
+    public function id(): ?int
     {
         return $this->id;
     }

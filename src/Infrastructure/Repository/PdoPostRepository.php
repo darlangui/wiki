@@ -26,6 +26,67 @@ class PdoPostRepository implements PostRepository
         return $this->hydratePostList($stmt);
     }
 
+    public function verifyPost() : array
+    {
+        $sqlQuery = "SELECT post.id, post.title, post.information, post.date, post.status, post.image, post.author_user_id, category.name FROM post
+                    INNER JOIN post_has_category ON post_has_category.post_id = post.id
+                    INNER JOIN category ON post_has_category.category_id = category.id WHERE post.status = 'Em Analise'";
+        $stmt = $this->connection->query($sqlQuery);
+        $list = [];
+        foreach ($stmt->fetchAll() as $item) {
+            $list[] = new Post($item['id'],$item['title'],$item['information'],new \DateTimeImmutable($item['date']),$item['status'],$item['image'],$item['name']);
+        }
+
+        return $list;
+    }
+
+    public function verifyPosts(int $id) : bool
+    {
+        $sqlQuery = "UPDATE post SET status = 'Rejeitado' WHERE post.id = '{$id}'";
+        $stmt = $this->connection->prepare($sqlQuery);
+
+        return $stmt->execute();
+    }
+
+    public function accPosts(int $id) : bool
+    {
+        $sqlQuery = "UPDATE post SET status = 'Aprovado' WHERE post.id = '{$id}'";
+        $stmt = $this->connection->prepare($sqlQuery);
+
+        return $stmt->execute();
+    }
+
+    public function upPost(Post $post, int $id) : bool
+    {
+        $sqlQuery = "INSERT INTO post (title, information, date, status, image, author_user_id) VALUES (:title, :information, :date, :status, :image, :author)";
+        $stmt = $this->connection->prepare($sqlQuery);
+        $stmt->bindValue(':title', $post->title());
+        $stmt->bindValue(':information', $post->information());
+        $stmt->bindValue(':date', $post->date()->format('Y-m-d'));
+        $stmt->bindValue(':status', $post->status());
+        $stmt->bindValue(':image', $post->image());
+        $stmt->bindValue(':author', $id);
+
+        if($stmt->execute()){
+            $idPost = $this->connection->lastInsertId();
+            $sqlQuery = "INSERT INTO category (name, description) VALUES (:name, :description)";
+            $stmt = $this->connection->prepare($sqlQuery);
+            $stmt->bindValue(':name', $post->category());
+            $stmt->bindValue(':description', '-----------');
+
+            if($stmt->execute()){
+                $idCat = $this->connection->lastInsertId();
+                $sqlQuery = "INSERT INTO post_has_category (post_id, post_author_user_id, category_id) VALUES (:post, :postAuthor, :category)";
+                $stmt = $this->connection->prepare($sqlQuery);
+                $stmt->bindValue(':post', $idPost);
+                $stmt->bindValue(':postAuthor', $id);
+                $stmt->bindValue(':category', $idCat);
+            }
+        }
+
+        return $stmt->execute();
+    }
+
     public function alterPost(Post $post) : bool
     {
         $sqlQuery = "UPDATE post SET title = :title, information = :information, date = :date, image = :image WHERE post.id = '{$post->id()}'";

@@ -50,7 +50,7 @@ main  .cards .card{
     border-style: solid;
     border-color: var(--primary-gray);
     margin-bottom: 25px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 main .cards .card img{
@@ -88,6 +88,18 @@ main .cards .card .resource h3{
 main .cards .card .resource span{
     color: var(--primary-gray);
     font-size: 1.3rem;
+    margin-right: 20px;
+}
+
+main .cards .card .resource .infos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+main .cards .card .resource .infos span{
+    font-size: 1.6rem;
+    color: var(--primary-regular);
 }
 
 main .cards .card .option{

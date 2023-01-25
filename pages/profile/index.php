@@ -25,6 +25,7 @@
     }else{
         $style = 'isUser';
         session_destroy();
+        header('Location: ../404');
     }
 
     function Specialization(PdoUserRepository $author){

@@ -119,6 +119,14 @@ main .publi span{
     font-family: 'Satoshi-Bold', sans-serif;
 }
 
+main .publi .containt_card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
 main .publi .card{
     margin-top: 25px;
     width: 460px;
