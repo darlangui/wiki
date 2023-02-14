@@ -40,5 +40,9 @@ Lembrando que para entrar no sistema como administrador é necessario inserir o 
 - `HTML5`
 - `MySQL 8.0`
 - `POO`
-     
 
+# Licença 
+
+The MIT License (MIT)
+
+Copyright ©️ 2023 - Wiking
