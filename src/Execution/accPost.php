@@ -9,7 +9,7 @@
 
     try {
         $repositorio->accPosts($id);
-        header('Location: ../../pages/profeader');
+        header('Location: ../../pages/profreader');
     }catch (PDOException $ex){
         echo $ex->getMessage();
     }

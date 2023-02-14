@@ -81,7 +81,7 @@
                         <a href="../../"><li class="li_selected">BOAS VINDAS</li></a>
                         <a href="../posts"><li class="li_selected">POSTS</li></a>
                         <a href="#"><li class="li_selected">AUTORES</li></a>
-                        <li class="li_selected">AJUDA</li>
+                        <a href="../help"><li class="li_selected">AJUDA</li></a>
                     </ul>
                 </section>
                 <section class="right">
