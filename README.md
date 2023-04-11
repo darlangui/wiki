@@ -34,7 +34,7 @@ Lembrando que para entrar no sistema como administrador é necessario inserir o 
 ## ✔️ Técnicas e tecnologias utilizadas
 
 
-- `PHP 8.1.0`
+- `PHP 8.2.0`
 - `ECMAScript 2018`
 - `CSS3`
 - `HTML5`
